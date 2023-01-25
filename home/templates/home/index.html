@@ -1,6 +1,47 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">Beauty Broker</h1>
+<body>
+    
+    <main>
+      <div class="container py-5 w-100">
+    
+        <div class="p-5 mb-4 bg-light rounded-3" id="home-hero">
+          <div class="container-fluid py-5 my-5" id="glossier-range">
+            <h1 class="display-5 fw-bold">Bringing beauty to you.</h1>
+            <p class="col-md-8 fs-4">Shop the latest skincare products for skin that shows your inner glow.</p>
+            <p class="col-md-8 fs-4">We carefully selected our skincare range from top brands to make sure there is the perfect product for every skin type.</p>
+            <button class="btn btn-secondary btn-lg mt-2" type="button" href="#">Shop skincare now</button>
+          </div>
+        </div>
+    
+        <div class="row align-items-md-stretch" id="home-features">
+          <div class="col-md-6">
+            <div class="h-100 p-5 my-2 bg-light rounded-3">
+              <h2>The Ordinary</h2>
+              <p>An evolving collection of treatments offering familiar, effective, clinical technologies at low prices.</p>
+              <button class="btn btn-outline-secondary" type="button">Shop The Ordinary</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="h-100 p-5 my-2 bg-light rounded-3">
+              <h2>Glossier</h2>
+              <p>Shop accessible luxury products inspired by our community to make you look and feel good.</p>
+              <button class="btn btn-outline-secondary" type="button">Shop Glossier.</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    
 {% endblock %}
