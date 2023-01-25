@@ -1,0 +1,100 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    font-family: 'Source Serif Pro', serif;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    color: #192524;
+    text-transform: uppercase;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.frosted {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 4%;
+}
+
+.pink-border-bottom {
+    border-bottom: 2px solid #dccdc6;
+}
+
+.shop-now-btn {
+    background-color: #192524;
+    color: #dccdc6;
+}
+
+.shop-now-btn:hover,
+.shop-now-btn:active,
+.shop-now-btn:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+#home-hero {
+    background: url('/media/to-squiggle1.jpeg') no-repeat bottom 20% center;
+    background-size: cover;
+}
+
+#to-feature {
+    background: url('/media/the-ordinary-assortment.jpeg') no-repeat bottom 20% center;
+    background-size: cover;
+}
+
+#glossier-feature {
+    background: url('/media/glossier-sunscreen.jpeg') no-repeat bottom 20% center;
+    background-size: cover;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
