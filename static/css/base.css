@@ -40,6 +40,11 @@ h1, h2 {
     border-bottom: 2px solid #dccdc6;
 }
 
+.text-pink h4 {
+    font-family: 'Source Serif Pro', serif;
+    color: #dccdc6 !important;
+}
+
 .shop-now-btn {
     background-color: #192524;
     color: #dccdc6;
@@ -75,6 +80,11 @@ h1, h2 {
     background-size: cover;
 }
 
+#delivery-banner {
+    background-color: #192524;
+    border: 2px solid #dccdc6;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -96,5 +106,13 @@ h1, h2 {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* small screen sizes */
+@media (max-width: 767px) {
+
+    #glossier-feature {
+        margin-top: 10% !important;
     }
 }
