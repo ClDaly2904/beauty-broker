@@ -65,6 +65,11 @@ h1, h2 {
     border: 1px solid black !important;
 }
 
+.card-img-top {
+    height:15rem;
+    object-fit: cover;
+}
+
 #home-hero {
     background: url('/media/to-squiggle1.jpeg') no-repeat bottom 20% center;
     background-size: cover;
