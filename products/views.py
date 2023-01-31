@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product
+from .models import Product, Product_Category, Skin_Concern
 
 
 def all_products(request):
@@ -9,6 +9,8 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
+    product_type = None
+    context = None
 
     if request.GET:
         if 'q' in request.GET:
@@ -20,11 +22,30 @@ def all_products(request):
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
+            context = {
+                'products': products,
+                'search_term': query,
+            }
 
-    context = {
-        'products': products,
-        'search_term': query,
-    }
+        if 'product_type' in request.GET:
+            product_type = request.GET['product_type'].split(',')
+            products = products.filter(product_type__name__in=product_type)
+            categories = Product_Category.objects.filter(name__in=product_type)
+            context = {
+                'products': products,
+                'search_term': query,
+                'current_category': categories,
+            }
+
+        if 'skin_type' in request.GET:
+            skin_type = request.GET['skin_type'].split(',')
+            products = products.filter(skin_type__name__in=skin_type)
+            skin_concern_category = Skin_Concern.objects.filter(name__in=skin_type)
+            context = {
+                'products': products,
+                'search_term': query,
+                'current_skin_concern': skin_concern_category,
+            }
 
     return render(request, 'products/products.html', context)
 

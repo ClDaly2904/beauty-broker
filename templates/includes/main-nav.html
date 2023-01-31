@@ -17,12 +17,12 @@
                 Shop by product type
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="product-type-link">
-                <a href="" class="dropdown-item">Cleansers</a>
-                <a href="" class="dropdown-item">Toners</a>
-                <a href="" class="dropdown-item">Serums</a>
-                <a href="" class="dropdown-item">Moisturisers</a>
-                <a href="" class="dropdown-item">Masks</a>
-                <a href="" class="dropdown-item">Sunscreens</a>
+                <a href="{% url 'products' %}?product_type=cleansers" class="dropdown-item">Cleansers</a>
+                <a href="{% url 'products' %}?product_type=toners" class="dropdown-item">Toners</a>
+                <a href="{% url 'products' %}?product_type=serums" class="dropdown-item">Serums</a>
+                <a href="{% url 'products' %}?product_type=moisturisers" class="dropdown-item">Moisturisers</a>
+                <a href="{% url 'products' %}?product_type=masks" class="dropdown-item">Masks</a>
+                <a href="{% url 'products' %}?product_type=sunscreens" class="dropdown-item">Sunscreens</a>
             </div>
         </li>
 
@@ -31,11 +31,11 @@
                 Shop by skin type
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="skin-type-link">
-                <a href="" class="dropdown-item">Dry skin</a>
-                <a href="" class="dropdown-item">Oily skin</a>
-                <a href="" class="dropdown-item">Combination skin</a>
-                <a href="" class="dropdown-item">Blemish prone skin</a>
-                <a href="" class="dropdown-item">Mature skin</a>
+                <a href="{% url 'products' %}?skin_type=dry_skin" class="dropdown-item">Dry skin</a>
+                <a href="{% url 'products' %}?skin_type=oily_skin" class="dropdown-item">Oily skin</a>
+                <a href="{% url 'products' %}?skin_type=combination_skin" class="dropdown-item">Combination skin</a>
+                <a href="{% url 'products' %}?skin_type=blemish_prone_skin" class="dropdown-item">Blemish prone skin</a>
+                <a href="{% url 'products' %}?skin_type=mature_skin" class="dropdown-item">Mature skin</a>
             </div>
         </li>
     </ul>
