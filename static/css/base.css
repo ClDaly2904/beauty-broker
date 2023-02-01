@@ -71,6 +71,27 @@ h1, h2, h3, h4 {
     object-fit: cover;
 }
 
+.product-results a {
+    text-decoration: none;
+    color: #192524;
+}
+
+.btt-button {
+    height: 50px;
+    width: 80px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #192524;
+    background-color: #dccdc6;
+    border: 2px solid #192524;
+    padding: 5px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 #home-hero {
     background: url('/media/to-squiggle1.jpeg') no-repeat bottom 20% center;
     background-size: cover;
@@ -89,6 +110,11 @@ h1, h2, h3, h4 {
 #delivery-banner {
     background-color: #192524;
     border: 2px solid #dccdc6;
+}
+
+#sort-selector {
+    color: #192524;
+    border: 2px solid #192524;
 }
 
 /* -------------------------------- Media Queries */

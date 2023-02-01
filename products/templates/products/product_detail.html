@@ -39,9 +39,23 @@
                     </div>
                 </div>
                 {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                <p><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</p>
                 {% else %}
-                <small class="text-muted">No Rating</small>
+                <p class="text-muted">No Rating</p>
+                {% endif %}
+                {% if product.product_type %}
+                <p class="small mt-1 mb-0 mt-3">
+                    <a class="text-muted" href="{% url 'products' %}?product_type={{ product.product_type.name }}">
+                        <i class="fas fa-tag mr-1"></i>{{ product.product_type.friendly_name }}
+                    </a>
+                </p>
+                {% endif %}
+                {% if product.skin_type %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'products' %}?skin_type={{ product.skin_type.name }}">
+                        <i class="fas fa-tag mr-1"></i>{{ product.skin_type.friendly_name }}
+                    </a>
+                </p>
                 {% endif %}
                 <h4 class="mt-5">Product Description</h4>
                 <p>{{ product.description }}</p>

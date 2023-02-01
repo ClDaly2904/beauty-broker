@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Product_Category, Skin_Concern
 
 
@@ -35,7 +36,7 @@ def all_products(request):
             categories = Product_Category.objects.filter(name__in=product_type)
             context = {
                 'products': products,
-                'current_category': categories,
+                'product_type': product_type,
             }
 
         if 'skin_type' in request.GET:
@@ -44,15 +45,19 @@ def all_products(request):
             skin_concern_category = Skin_Concern.objects.filter(name__in=skin_type)
             context = {
                 'products': products,
-                'current_skin_concern': skin_concern_category,
+                'skin_type': skin_type,
             }
 
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
+
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+
+            if sortkey == 'product_type':
+                sortkey = 'product_type__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -65,10 +70,10 @@ def all_products(request):
                 'current_sorting': current_sorting,
             }
 
-        else:
-            context = {
-                'products': products,
-            }
+    else:
+        context = {
+            'products': products,
+        }
 
     return render(request, 'products/products.html', context)
 
