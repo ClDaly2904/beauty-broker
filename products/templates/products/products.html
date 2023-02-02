@@ -17,9 +17,9 @@
             {% if product_type %}
                 {{ product_type|join:"[]" }}
             {% elif skin_type %}
-                {{ skin_type|join:"[], _" }}
+                {{ skin_type }}
             {% else %}
-                Skincare
+                All skincare
             {% endif %}
             </h2>
             <hr class="w-50 mb-1">

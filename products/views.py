@@ -42,10 +42,11 @@ def all_products(request):
         if 'skin_type' in request.GET:
             skin_type = request.GET['skin_type'].split(',')
             products = products.filter(skin_type__name__in=skin_type)
-            skin_concern_category = Skin_Concern.objects.filter(name__in=skin_type)
+            sc_word = "".join(skin_type)
+            skin_concern_category = sc_word.replace('_', ' ')
             context = {
                 'products': products,
-                'skin_type': skin_type,
+                'skin_type': skin_concern_category,
             }
 
         if 'sort' in request.GET:
