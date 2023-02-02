@@ -10,18 +10,80 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col text-center mt-5">
             <h2 class="logo-font">Your shopping bag</h2>
             <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             {% if bag_items %}
-            <div class="table-responsive"></div>
+            <table class="table table-sm table-borderless">
+                <thead class="text-black">
+                    <tr>
+                        <th scope="col"><h4>Product</h4></th>
+                        <th scope="col"><h4>Size</h4></th>
+                        <th scope="col"><h4>Price</h4></th>
+                        <th scope="col"><h4>Quantity</h4></th>
+                        <th scope="col"><h4>Subtotal</h4></th>
+                    </tr>
+                </thead>
+
+                {% for item in bag_items %}
+                    <tr>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        </td>
+                        <td class="py-3">
+                            {% if item.product.size %}
+                            <p class="my-0">{{ item.product.size }}</p>
+                            {% else %}
+                            <p class="my-0">N/A</p>
+                            {% endif %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£{{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0">{{ item.quantity }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£{{ item.product.price }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="5" class="pt-2 text-right">
+                        <hr>
+                        <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+                        {% if free_shipping_delta <= 0 %}
+                            <p>You have qualified for free delivery!</p>
+                        {% else %}
+                            <h6>Delivery: £{{ shipping|floatformat:2 }}</h6>
+                        {% endif %}
+                        <hr>
+                        <h4 class="mt-3"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                        {% if free_shipping_delta > 0 %}
+                            <p class="mb-3 text-danger">
+                                Spend <strong>£{{ free_delivery_delta }}</strong> more to get free shipping!
+                            </p>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="text-right" id="sc-btn">
+                        <a href="" class="atb-btn my-2">
+                            <span>Secure Checkout</span>
+                            <span class="icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </a>
+                        <hr>
+                    </td>
+                </tr>
+            </table>
             {% else %}
             <h4 class="ml-3">Your bag is empty!</h4>
             <p class="mt-3 ml-3 mb-5">Please click the button below to browse our sumptious selection of skincare...</p>
@@ -33,4 +95,14 @@
         </div>
     </div>
 </div>
+
+{% if bag_items %}
+    <div class="shadow-sm pd-ks-button">
+        <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+            <i class="fas fa-chevron-left mx-auto my-auto"></i>
+            <small class="mx-auto my-auto">Keep shopping</small>
+        </a>
+    </div>
+{% endif %}
+
 {% endblock %}

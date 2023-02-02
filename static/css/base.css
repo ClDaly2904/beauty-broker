@@ -50,11 +50,8 @@ h1, h2, h3, h4, h5 {
     color: #dccdc6;
 }
 
-.shop-now-btn:hover,
-.shop-now-btn:active,
-.shop-now-btn:focus {
-    background: #222;
-    color: white;
+a:hover {
+    text-decoration: none;
 }
 
 .text-black {
@@ -122,6 +119,16 @@ h1, h2, h3, h4, h5 {
     border-color: white;
 }
 
+.atb-btn {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    color: #dccdc6;
+    background-color: #192524;
+    border: 2px solid #dccdc6;
+    padding: 5px;
+}
+
 #home-hero {
     background: url('/media/to-squiggle1.jpeg') no-repeat bottom 20% center;
     background-size: cover;
@@ -147,13 +154,12 @@ h1, h2, h3, h4, h5 {
     border: 2px solid #192524;
 }
 
-#atb-btn {
-    padding: 10px;
-    font-size: 1.2rem;
-}
-
 #pd-btn {
     font-size: 1.25rem;
+}
+
+#sc-btn :hover {
+    color: #dccdc6!important;
 }
 
 /* -------------------------------- Media Queries */
