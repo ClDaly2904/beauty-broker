@@ -57,10 +57,51 @@
                     </a>
                 </p>
                 {% endif %}
-                <h4 class="mt-5">Product Description</h4>
-                <p>{{ product.description }}</p>
+                <form class="form" action="{% url 'add_to_bag' product.pk %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-6">
+                            <h5 class="mt-5">Quantity:</h5>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group w-50">
+                                <div class="input-group mt-5">
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ product.pk }}" id="id_qty_{{ product.pk }}">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" id="atb-btn" class="mt-3 mb-3 ks-button" value="Add to Bag">
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
+                <hr>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h4 class="mb-0">
+                          <button class="btn text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="pd-btn">
+                            Product Description <span class="ml-2"><i class="fas fa-chevron-down"></i></span>
+                          </button>
+                        </h4>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            {{ product.description }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="shadow-sm pd-ks-button">
+    <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+        <i class="fas fa-chevron-left mx-auto my-auto"></i>
+        <small class="mx-auto my-auto">Keep shopping</small>
+    </a>
 </div>
 {% endblock %}

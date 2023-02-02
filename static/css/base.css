@@ -8,7 +8,7 @@ body {
     font-family: 'Source Serif Pro', serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -88,6 +88,19 @@ h1, h2, h3, h4 {
     padding: 5px;
 }
 
+.pd-ks-button {
+    font-family: 'Oswald', sans-serif;
+    height: 60px;
+    width: 90px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: #192524;
+    background-color: #dccdc6;
+    border: 2px solid #192524;
+    padding: 5px;
+}
+
 .ks-button {
     font-family: 'Oswald', sans-serif;
     color: #192524;
@@ -98,6 +111,15 @@ h1, h2, h3, h4 {
 
 .btt-link {
     cursor: pointer;
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    background: white;
+    border-color: white;
 }
 
 #home-hero {
@@ -123,6 +145,15 @@ h1, h2, h3, h4 {
 #sort-selector {
     color: #192524;
     border: 2px solid #192524;
+}
+
+#atb-btn {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+#pd-btn {
+    font-size: 1.25rem;
 }
 
 /* -------------------------------- Media Queries */
