@@ -42,7 +42,6 @@ h1, h2, h3, h4 {
 }
 
 .text-pink h4 {
-    font-family: 'Source Serif Pro', serif;
     color: #dccdc6 !important;
 }
 
@@ -77,11 +76,20 @@ h1, h2, h3, h4 {
 }
 
 .btt-button {
+    font-family: 'Oswald', sans-serif;
     height: 50px;
     width: 80px;
     position: fixed;
     bottom: 10px;
     right: 10px;
+    color: #192524;
+    background-color: #dccdc6;
+    border: 2px solid #192524;
+    padding: 5px;
+}
+
+.ks-button {
+    font-family: 'Oswald', sans-serif;
     color: #192524;
     background-color: #dccdc6;
     border: 2px solid #192524;
