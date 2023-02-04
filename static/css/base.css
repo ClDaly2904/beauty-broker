@@ -129,6 +129,11 @@ a:hover {
     padding: 5px;
 }
 
+.quantity-btn {
+    background-color: #dccdc6;
+    color: #192524;
+}
+
 #home-hero {
     background: url('/media/to-squiggle1.jpeg') no-repeat bottom 20% center;
     background-size: cover;
