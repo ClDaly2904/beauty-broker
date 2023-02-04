@@ -23,52 +23,89 @@
             <table class="table table-sm table-borderless">
                 <thead class="text-black">
                     <tr>
-                        <th scope="col"><h4>Product</h4></th>
-                        <th scope="col"><h4>Size</h4></th>
-                        <th scope="col"><h4>Price</h4></th>
-                        <th scope="col"><h4>Quantity</h4></th>
-                        <th scope="col"><h4>Subtotal</h4></th>
+                        <th scope="col">
+                            <h4>Product</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Size</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Price</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Quantity</h4>
+                        </th>
+                        <th scope="col">
+                            <h4>Subtotal</h4>
+                        </th>
                     </tr>
                 </thead>
 
                 {% for item in bag_items %}
-                    <tr>
-                        <td class="py-3">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                        </td>
-                        <td class="py-3">
-                            {% if item.product.size %}
-                            <p class="my-0">{{ item.product.size }}</p>
-                            {% else %}
-                            <p class="my-0">N/A</p>
-                            {% endif %}
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.product.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.product.price }}</p>
-                        </td>
-                    </tr>
+                <tr>
+                    <td class="py-3">
+                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    </td>
+                    <td class="py-3">
+                        {% if item.product.size %}
+                        <p class="my-0">{{ item.product.size }}</p>
+                        {% else %}
+                        <p class="my-0">N/A</p>
+                        {% endif %}
+                    </td>
+                    <td class="py-3">
+                        <p class="my-0">£{{ item.product.price }}</p>
+                    </td>
+                    <td class="py-3 w-25">
+                        <form class="form update-form" method="POST" action="{% url 'update_bag' item.item_id %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <div class="input-group input-group-{{ product.id }}">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn quantity-btn rounded-0 decrement-qty_{{ product.id }}"
+                                            data-item_id="{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
+                                        name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn quantity-btn rounded-0 increment-qty_{{ product.id }}"
+                                            data-item_id="{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <a class="update-link"><small>Update</small></a>
+                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                            ><small><i class="fas fa-trash-alt"></i></small></a>
+                    </td>
+                    <td class="py-3">
+                        <p class="my-0">£{{ item.product.price }}</p>
+                    </td>
+                </tr>
                 {% endfor %}
                 <tr>
                     <td colspan="5" class="pt-2 text-right">
                         <hr>
                         <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                         {% if free_shipping_delta <= 0 %}
-                            <p>You have qualified for free delivery!</p>
+                        <p>You have qualified for free delivery!</p>
                         {% else %}
-                            <h6>Delivery: £{{ shipping|floatformat:2 }}</h6>
+                        <h6>Delivery: £{{ shipping|floatformat:2 }}</h6>
                         {% endif %}
                         <hr>
                         <h4 class="mt-3"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                         {% if free_shipping_delta > 0 %}
-                            <p class="mb-3 text-danger">
-                                Spend <strong>£{{ free_delivery_delta }}</strong> more to get free shipping!
-                            </p>
+                        <p class="mb-3 text-danger">
+                            Spend <strong>£{{ free_delivery_delta }}</strong> more to get free shipping!
+                        </p>
                         {% endif %}
                     </td>
                 </tr>
@@ -97,12 +134,38 @@
 </div>
 
 {% if bag_items %}
-    <div class="shadow-sm pd-ks-button">
-        <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Keep shopping">
-            <i class="fas fa-chevron-left mx-auto my-auto"></i>
-            <small class="mx-auto my-auto">Keep shopping</small>
-        </a>
-    </div>
+<div class="shadow-sm pd-ks-button">
+    <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+        <i class="fas fa-chevron-left mx-auto my-auto"></i>
+        <small class="mx-auto my-auto">Keep shopping</small>
+    </a>
+</div>
 {% endif %}
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}
