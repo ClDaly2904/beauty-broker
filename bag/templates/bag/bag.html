@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -88,12 +89,12 @@
                                 </div>
                             </div>
                         </form>
-                        <a class="update-link"><small>Update</small></a>
+                        <a class="update-link"><small><strong>Update</strong></small></a>
                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
                             aria-label="Remove from shopping bag"><small><i class="fas fa-trash-alt"></i></small></a>
                     </td>
                     <td class="py-3">
-                        <p class="my-0">£{{ item.product.price }}</p>
+                        <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     </td>
                 </tr>
                 {% endfor %}
@@ -110,7 +111,7 @@
                         <h4 class="mt-3"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                         {% if free_shipping_delta > 0 %}
                         <p class="mb-3 text-danger">
-                            Spend <strong>£{{ free_delivery_delta }}</strong> more to get free shipping!
+                            Spend <strong>£{{ free_shipping_delta }}</strong> more to get free shipping!
                         </p>
                         {% endif %}
                     </td>
