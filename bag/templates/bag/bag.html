@@ -60,22 +60,28 @@
                         <form class="form update-form" method="POST" action="{% url 'update_bag' item.item_id %}">
                             {% csrf_token %}
                             <div class="form-group">
-                                <div class="input-group input-group-{{ product.id }}">
+                                <div class="input-group input-group-{{ item.item_id }}">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn quantity-btn rounded-0 decrement-qty_{{ product.id }}"
-                                            data-item_id="{{ product.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-minus"></i>
+                                        <button
+                                            class="decrement-qty btn btn-sm quantity-btn rounded-0 decrement-qty_{{ item.item_id }} 
+                                            {% if item.size %}decrement-size_{{ item.item_id }}_{{ item.size }}{% endif %}"
+                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
+                                            <span>
+                                                <i class="fas fa-minus fa-sm"></i>
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
-                                        name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
+                                    <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} 
+                                        {% if item.size %}size_{{ item.item_id }}_{{ item.size }}{% endif %}"
+                                        type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                        data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn quantity-btn rounded-0 increment-qty_{{ product.id }}"
-                                            data-item_id="{{ product.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-plus"></i>
+                                        <button
+                                            class="increment-qty btn btn-sm quantity-btn rounded-0 increment-qty_{{ item.item_id }} 
+                                            {% if item.size %}increment-size_{{ item.item_id }}_{{ item.size }}{% endif %}"
+                                            data-item_id="{{ item.item_id }}" data-size="{{ item.size }}">
+                                            <span>
+                                                <i class="fas fa-plus fa-sm"></i>
                                             </span>
                                         </button>
                                     </div>
@@ -84,7 +90,7 @@
                         </form>
                         <a class="update-link"><small>Update</small></a>
                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
-                            ><small><i class="fas fa-trash-alt"></i></small></a>
+                            aria-label="Remove from shopping bag"><small><i class="fas fa-trash-alt"></i></small></a>
                     </td>
                     <td class="py-3">
                         <p class="my-0">£{{ item.product.price }}</p>
@@ -150,22 +156,24 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
+    $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })
 
     // Remove item from bag
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     })
 </script>
 {% endblock %}
