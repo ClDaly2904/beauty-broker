@@ -30,6 +30,7 @@ class OrderForm(forms.ModelForm):
             'street_address2': 'Street Address Line 2',
             'town_or_city': 'Town or City',
             'county': 'County, State or Locality',
+            'country': 'Country'
         }
 
         # set autofocus on first field of form

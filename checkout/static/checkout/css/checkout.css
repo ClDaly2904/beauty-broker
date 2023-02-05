@@ -1,0 +1,13 @@
+.co-btn {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    color: #dccdc6;
+    background-color: #192524;
+    border: 2px solid #dccdc6;
+    padding: 5px;
+}
+
+.co-btn:hover {
+    color: #dccdc6;
+}

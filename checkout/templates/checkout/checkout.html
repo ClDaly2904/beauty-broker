@@ -24,15 +24,63 @@
 
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p>Please fill out the form below to complete your purchase</p>
+            <p>Please fill out the form below to complete your purchase.
+                Required fields are marked with an asterisk(*).</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                {% csrf token %}
+                {% csrf_token %}
                 <fieldset class="px-3 mb-5">
-                    <legend class="fieldset-label small px-2 w-auto">Personal Details</legend>
-                    {{ order_form.full_name | as_crispy_field }}
+                    <legend class="fieldset-label px-2 w-auto"><h5>Personal Details</h5></legend>
+                        {{ order_form.first_name | as_crispy_field }}
+                        {{ order_form.last_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
                 </fieldset>
+                <fieldset class="px-3 mb-5">
+                    <legend class="fieldset-label px-2 w-auto"><h5>Delivery Information</h5></legend>
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                    <div class="form-check form-check-inline float-right mr-0">
+                        {% if user.is_authenticated %}
+                            <label class="form-check-label" for="id-save-info"><i>Save as default delivery address</i></label>
+                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <fieldset class="px-3 mb-5">
+                    <legend class="fieldset-label px-2 w-auto"><h5>Payment Details</h5></legend>
+                    <div class="mb-3" id="stripe-card-element">
+
+                    </div>
+                    <div class="mb-3 text-danger" id="stripe-errors">
+
+                    </div>
+                </fieldset>
+
+                <div class="submit-button mt-5 mb-5 px-3">                    
+                    <p>Order Total: <strong>£{{ grand_total|floatformat:2 }}</strong></p>
+                    <button id="submit-button" class="btn rounded-0 co-btn">
+                        <h5>Confirm Order</h5>
+                    </button>
+                </div>
             </form>
         </div>
     </div>
 </div>
+
+<div class="shadow-sm pd-ks-button">
+    <a href="{% url 'view_bag' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+        <i class="fas fa-chevron-left mx-auto my-auto"></i>
+        <small class="mx-auto my-auto">Edit Bag</small>
+    </a>
+</div>
+
 {% endblock %}
