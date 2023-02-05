@@ -23,7 +23,7 @@ def add_to_bag(request, item_id):
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
         messages.success(request, f'Updated {product.name} quantity to\n'
-                                  f'{bag[item]}!')
+                                  f'{bag[item_id]}!')
 
     else:
         bag[item_id] = quantity
@@ -45,7 +45,7 @@ def update_bag(request, item_id):
     if quantity > 0:
         bag[item_id] = quantity
         messages.success(request, f'Updated {product.name} quantity to\n'
-                                  f'{bag[item]}!')
+                                  f'{bag[item_id]}!')
 
     else:
         bag.pop(item_id)

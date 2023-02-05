@@ -1,3 +1,5 @@
+{% load bag_tools %}
+
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white text-black">
@@ -13,5 +15,43 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
+        {% if grand_total %}
+            <h5 class="py-1">Your Bag ({{ product_count }})</h5>
+            <div class="bag-notification-wrapper">
+                {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col-12 my-auto">
+                            <p class="m-0"><small><strong>{{ item.product.name }}</strong></small></p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="m-0"><small>Qty: {{ item.quantity }}</small></p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="m-0"><small><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="m-1">
+                        <p class="text-center"><strong>Bag Total: £{{ total|floatformat:2 }}</strong></p>
+                    </div>
+                    {% if free_shipping_delta > 0 %}
+                        <p class="my-1 text-center quantity-btn">
+                            Spend £{{ free_shipping_delta }} more to get free delivery!
+                        </p>
+                    {% endif %}
+                    <div id="sc-btn">
+                    <a href="{% url 'view_bag' %}" class="btn btn-block rounded-0 atb-btn">
+                        <h5>Checkout <i class="fas fa-lock"></i></h5>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>

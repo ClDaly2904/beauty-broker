@@ -144,6 +144,12 @@ a:hover {
     font-family: 'Oswald', sans-serif;
 }
 
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 #home-hero {
     background: url('/media/to-squiggle1.jpeg') no-repeat bottom 20% center;
     background-size: cover;
@@ -177,7 +183,7 @@ a:hover {
     color: #dccdc6!important;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* ------------------------------- Bootstrap Toasts */
 
 .message-container {
     position: fixed;
@@ -188,7 +194,7 @@ a:hover {
 
 .custom-toast {
     overflow: visible;
-    min-width: 150px;
+    min-width: 200px;
 }
 
 .toast-capper {
