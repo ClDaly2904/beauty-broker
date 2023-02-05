@@ -8,7 +8,7 @@ body {
     font-family: 'Source Serif Pro', serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, header p {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -41,13 +41,19 @@ h1, h2, h3, h4, h5 {
     border-bottom: 2px solid #dccdc6;
 }
 
-.text-pink h4 {
+.text-pink h5 {
     color: #dccdc6 !important;
+    padding: 4px;
 }
 
 .shop-now-btn {
+    border-radius: 0;
     background-color: #192524;
     color: #dccdc6;
+}
+
+.shop-now-btn:hover {
+    color: white;
 }
 
 a:hover {
@@ -64,6 +70,12 @@ a:hover {
 
 .card-img-top {
     height:15rem;
+    object-fit: cover;
+}
+
+.bag-img {
+    height:5rem;
+    width: 5rem;
     object-fit: cover;
 }
 
@@ -150,6 +162,11 @@ a:hover {
     overflow-y: auto;
 }
 
+#search-icon {
+    background-color: #dccdc6;
+    color: #192524;
+}
+
 #home-hero {
     background: url('/media/to-squiggle1.jpeg') no-repeat bottom 20% center;
     background-size: cover;
@@ -179,8 +196,12 @@ a:hover {
     font-size: 1.25rem;
 }
 
-#sc-btn :hover {
-    color: #dccdc6!important;
+#sc-btn:hover, .atb-btn:hover {
+    color: white!important;
+}
+
+#sc-btn span {
+    padding: 8px;
 }
 
 /* ------------------------------- Bootstrap Toasts */

@@ -1,5 +1,4 @@
 .co-btn {
-    padding: 12px;
     font-size: 1.2rem;
     font-family: 'Oswald', sans-serif;
     color: #dccdc6;
@@ -8,6 +7,15 @@
     padding: 5px;
 }
 
-.co-btn:hover {
-    color: #dccdc6;
+.co-btn h5 {
+    padding: 5px;
+}
+
+.co-btn:hover, .co-btn h5:hover {
+    color: white;
+}
+
+.co-img {
+    height: 4rem;
+    object-fit: cover;
 }

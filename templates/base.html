@@ -60,7 +60,7 @@
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search skincare...">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit" id="search-icon">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -121,7 +121,13 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col text-pink">
-                <h4 class="my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h4>
+                {% if free_shipping_delta == 45 %}
+                    <h5 class="my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h5>
+                {% elif free_shipping_delta <= 0 %}
+                    <h5>You have qualified for free delivery!</h5>
+                {% else %}
+                    <h5>Spend <strong>£{{ free_shipping_delta }}</strong> more to get free delivery!</h5>
+                {% endif %}
             </div>
         </div>
     </header>

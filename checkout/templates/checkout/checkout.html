@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -24,6 +25,7 @@
 
     <div class="row">
         <div class="col-12 col-lg-6">
+            <h4 class="mb-3">Checkout</h4>
             <p>Please fill out the form below to complete your purchase.
                 Required fields are marked with an asterisk(*).</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -68,10 +70,53 @@
                 <div class="submit-button mt-5 mb-5 px-3">                    
                     <p>Order Total: <strong>£{{ grand_total|floatformat:2 }}</strong></p>
                     <button id="submit-button" class="btn rounded-0 co-btn">
-                        <h5>Confirm Order</h5>
+                        <h5>Confirm Order And Pay</h5>
                     </button>
                 </div>
             </form>
+        </div>
+        <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <h4 class="mb-3">Order Summary ({{ product_count }} items)</h4>
+            {% for item in bag_items %}
+                <div class="row">
+                    <div class="col-2 mb-1">
+                        <a href="{% url 'product_detail' item.product.pk %}">
+                            {% if item.product.image %}
+                                <img class="w-100 co-img" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="col-7">
+                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="my-0 small">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    </div>
+                </div>
+                <hr>
+            {% endfor %}
+            <div class="row text-right">
+                <div class="col-7 offset-2 mt-3">
+                    <p class="my-0">Bag Total:</p>
+                    <p class="my-0">Delivery:</p>
+                    <p class="my-3"><strong>Total:</strong></p>
+                </div>
+                <div class="col-3">
+                    <p class="my-0 mt-3">£{{ total | floatformat:2 }}</p>
+                    {% if free_shipping_delta <= 0 %}
+                        <p class="my-0"><i>Free!</i></p>
+                    {% else %}
+                        <p class="my-0">£{{ shipping | floatformat:2 }}*</p>
+                    {% endif %}
+                    <p class="my-3"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                </div>
+                <div class="col-12">
+                    <p class="my-0 text-muted small"><i>* Delivery is calculated at 10% of item total</i></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
