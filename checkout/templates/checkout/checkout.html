@@ -25,6 +25,13 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             <p>Please fill out the form below to complete your purchase</p>
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf token %}
+                <fieldset class="px-3 mb-5">
+                    <legend class="fieldset-label small px-2 w-auto">Personal Details</legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                </fieldset>
+            </form>
         </div>
     </div>
 </div>
