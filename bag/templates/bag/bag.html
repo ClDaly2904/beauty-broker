@@ -47,7 +47,13 @@
                 {% for item in bag_items %}
                 <tr>
                     <td class="py-3">
-                        <img class="bag-img img-fluid" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                        <a href="{% url 'product_detail' item.product.pk %}">
+                            {% if item.product.image %}
+                                <img class="bag-img img-fluid" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                                <img class="bag-img img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            {% endif %}
+                        </a>
                     </td>
                     <td class="py-3">
                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>

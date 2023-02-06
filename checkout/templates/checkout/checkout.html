@@ -25,8 +25,8 @@
 
     <div class="row">
         <div class="col-12 col-lg-6">
-            <h4 class="mb-3">Checkout</h4>
-            <p>Please fill out the form below to complete your purchase.
+            <h4 class="mb-3 px-3">Checkout</h4>
+            <p class="px-3">Please fill out the form below to complete your purchase.
                 Required fields are marked with an asterisk(*).</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
@@ -128,4 +128,11 @@
     </a>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
