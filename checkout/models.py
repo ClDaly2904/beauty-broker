@@ -42,8 +42,8 @@ class Order(models.Model):
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
 
         # calculate cost of shipping
-        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            sdp = settings.STANDARD_DELIVERY_PERCENTAGE
+        if self.order_total < settings.FREE_SHIPPING_THRESHOLD:
+            sdp = settings.STANDARD_SHIPPING_PERCENTAGE
             self.delivery_cost = self.order_total * sdp / 100
         else:
             self.delivery_cost = 0

@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
+from .forms import OrderForm, Order
 from .models import OrderLineItem
 
 from products.models import Product
@@ -39,11 +39,11 @@ def checkout(request):
         order_form = OrderForm(form_data)
 
         if order_form.is_valid():
-            order_form.save()
+            order = order_form.save()
             # iterate through bag items to create line item
             for item_id, item_data in bag.items():
                 try:
-                    product = Product.objects.get(id=item_id)
+                    product = Product.objects.get(pk=item_id)
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
@@ -100,6 +100,31 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """ Page to handle successful checkout """
+
+    # check if user requested to save delivery information
+    save_info = request.session.get('save_info')
+
+    # get the successful order number
+    order = get_object_or_404(Order, order_number=order_number)
+    # confirm success to user
+    messages.success(request, f'Order successfully processed! \
+        Your order number reference is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    # clear bag
+    if 'bag' in request.session:
+        del request.session['bag']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
