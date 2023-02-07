@@ -64,6 +64,8 @@
                     <div class="mb-3 text-danger" id="stripe-errors">
 
                     </div>
+                    <!-- Pass the client secret to the view so we can get the payment intent id -->
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
                 <div class="submit-button mt-5 mb-5 px-3">                    
