@@ -32,13 +32,12 @@
                 {% csrf_token %}
                 <fieldset class="px-3 mb-5">
                     <legend class="fieldset-label px-2 w-auto"><h5>Personal Details</h5></legend>
-                        {{ order_form.first_name | as_crispy_field }}
-                        {{ order_form.last_name | as_crispy_field }}
+                        {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
+                        {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <fieldset class="px-3 mb-5">
                     <legend class="fieldset-label px-2 w-auto"><h5>Delivery Information</h5></legend>
-                        {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}
