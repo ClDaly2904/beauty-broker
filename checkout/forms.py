@@ -29,22 +29,21 @@ class OrderForm(forms.ModelForm):
             'street_address2': 'Street Address Line 2',
             'town_or_city': 'Town or City',
             'county': 'County, State or Locality',
-            'country': 'Country'
         }
 
         # set autofocus on first field of form
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
 
-            # iterate through each field
-            if self.fields[field].required:
+            # iterate through each field other than country
+            if field != 'country':
                 # add asterisk to show required fields to user
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-
-            # add placeholder values from placeholders dict
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                # add placeholder values from placeholders dict
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             # remove field labels as placeholders are present
             self.fields[field].label = False
