@@ -57,6 +57,16 @@
                     </a>
                 </p>
                 {% endif %}
+                {% if request.user.is_superuser %}
+                <hr>
+                <div class="row">
+                    <div class="col mx-auto text-center">
+                        <a href="{% url 'edit_product' product.pk %}" class="btn btn-info">Edit</a>
+                        <a class="btn btn-danger" href="">Delete</a>
+                    </div>
+                </div>
+                <hr>
+                {% endif %}
                 <form class="form" action="{% url 'add_to_bag' product.pk %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
