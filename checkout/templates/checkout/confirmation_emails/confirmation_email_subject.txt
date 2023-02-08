@@ -1,0 +1,1 @@
+Beauty Broker. We've got your order! {{ order.order_number }}

@@ -1,0 +1,20 @@
+Hello {{ order.full_name }}!
+
+This is an email to confirm we've received your order here at Beauty Broker. Please find your order information below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+Delivery: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+Your skincare haul will be on its way to you at {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+Please check your contact number is correct in case we need to update you about your order {{ order.phone_number }}
+
+If you have any questions, please contact us at {{ contact_email }}.
+
+Thank you for your order and enjoy your haul!
+
+Beauty Broker.
