@@ -22,13 +22,13 @@
         <div class="row">
             <div class="col-12 col-md-6 mx-auto">
                 <p class="mt-5 text-center">Are you sure that you want to delete {{ product.name }}?</p>
-                <form method="POST" class="mb-2">
-                    {% csrf_token %}
-                    <div class="text-center mb-5">
+                <div class="text-center mb-5">
+                    <form method="POST" class="mb-2">
+                        {% csrf_token %}
                         <button class="btn btn-danger rounded-0" type="submit">Delete Product</button>
-                        <button class="btn atb-btn" href="{% url 'products' %}">Cancel</button>
-                    </div>
-                </form>
+                    </form>
+                    <a class="btn atb-btn" href="{% url 'products' %}">Cancel</a>
+                </div>
             </div>            
         </div>
     </div>
