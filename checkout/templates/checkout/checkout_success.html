@@ -18,7 +18,12 @@
 <div class="container">
     <div class="row">
         <div class="col text-center mt-5">
-            <h2 class="logo-font">Thank you for your order!</h2>
+            {% if from_profile %}
+                <h2 class="logo-font">Confirmation of past order</h2>
+                <h4>Placed: {{ order.date }}</h4>
+            {% else %}
+                <h2 class="logo-font">Thank you for your order!</h2>
+            {% endif %}
             <hr>
         </div>
     </div>
@@ -140,7 +145,7 @@
                         {% if item.product.image %}
                         <img class="w-100 co-img" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                         {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img class="w-100" src="/media/noimage.png" alt="{{ product.name }}">
                         {% endif %}
                     </a>
                 </div>
