@@ -222,6 +222,39 @@ a:hover {
     height: 4px;
 }
 
+
+/* ------------------------------- AllAuth Formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #192524;
+}
+
+.allauth-form-inner-content input {
+    border-color: #192524;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    color: #dccdc6;
+    background-color: #192524;
+    border: 2px solid #dccdc6;
+    padding: 5px;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+}
+
 /* -------------------------------- Media Queries */
 
 /* fixed top navbar only on medium and up */
