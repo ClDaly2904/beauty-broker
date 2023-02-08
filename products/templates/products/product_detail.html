@@ -61,8 +61,8 @@
                 <hr>
                 <div class="row">
                     <div class="col mx-auto text-center">
-                        <a href="{% url 'edit_product' product.pk %}" class="btn btn-info">Edit</a>
-                        <a class="btn btn-danger" href="">Delete</a>
+                        <a class="btn btn-info" href="{% url 'edit_product' product.pk %}">Edit</a>
+                        <a class="btn btn-danger" href="{% url 'delete_product' product.pk %}">Delete</a>
                     </div>
                 </div>
                 <hr>

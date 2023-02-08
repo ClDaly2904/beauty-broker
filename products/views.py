@@ -128,7 +128,7 @@ def edit_product(request, product_id):
             form.save()
             messages.success(request, 'Successfully updated product!')
             # return user to the newly updated product page
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product_detail', args=[product.pk]))
         else:
             messages.error(request, 'Failed to update product information.\n'
                                     ' Please ensure the information provided\n'
@@ -144,4 +144,21 @@ def edit_product(request, product_id):
         'form': form,
     }
 
+    return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        product.delete()
+        messages.success(request, 'Product deleted!')
+        return redirect(reverse('products'))
+
+    template = 'products/delete_product.html'
+    context = {
+        'product': product,
+    }
     return render(request, template, context)

@@ -15,18 +15,18 @@
             <div class="col-12 col-md-6 mx-auto">
                 <h2 class="logo-font mt-5 text-center">Product Management</h2>
                 <hr>
-                <h5 class="text-center mb-5">Add a Product</h5>
+                <h5 class="text-center mb-5">Confirm Product Deletion</h5>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6 mx-auto">
-                <!--- Add encode type as images might be being sent in form -->
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                <p class="mt-5 text-center">Are you sure that you want to delete {{ product.name }}?</p>
+                <form method="POST" class="mb-2">
                     {% csrf_token %}
-                    {{ form | crispy }}
                     <div class="text-center mb-5">
-                        <button class="btn atb-btn rounded-0" type="submit">Add Product</button>
+                        <button class="btn btn-danger rounded-0" type="submit">Delete Product</button>
+                        <button class="btn atb-btn" href="{% url 'products' %}">Cancel</button>
                     </div>
                 </form>
             </div>            
@@ -34,7 +34,7 @@
     </div>
 
     <div class="shadow-sm pd-ks-button">
-        <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+        <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Cancel">
             <i class="fas fa-chevron-left mx-auto my-auto"></i>
             <small class="mx-auto my-auto">Cancel</small>
         </a>
