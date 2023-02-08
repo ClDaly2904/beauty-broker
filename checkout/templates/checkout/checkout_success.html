@@ -183,13 +183,23 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="shadow-sm pd-ks-button">
-    <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Keep shopping">
-        <i class="fas fa-chevron-left mx-auto my-auto"></i>
-        <small class="mx-auto my-auto">Keep Shopping</small>
-    </a>
+
+{% if from_profile %}
+    <div class="shadow-sm pd-ks-button">
+        <a href="{% url 'profile' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+            <i class="fas fa-chevron-left mx-auto my-auto"></i>
+            <small class="mx-auto my-auto">Back to Account</small>
+        </a>
+    </div>
+{% else %}
+    <div class="shadow-sm pd-ks-button">
+        <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+            <i class="fas fa-chevron-left mx-auto my-auto"></i>
+            <small class="mx-auto my-auto">Keep Shopping</small>
+        </a>
+    </div>
+{% endif %}
 </div>
 
 {% endblock %}
