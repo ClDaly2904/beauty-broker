@@ -168,17 +168,17 @@ a:hover {
 }
 
 #home-hero {
-    background: url('/media/to-squiggle1.jpeg') no-repeat bottom 20% center;
+    background: url('/media/to-background-med.webp') no-repeat bottom 20% center;
     background-size: cover;
 }
 
 #to-feature {
-    background: url('/media/the-ordinary-assortment.jpeg') no-repeat bottom 20% center;
+    background: url('/media/to-collection-small.webp') no-repeat bottom 20% center;
     background-size: cover;
 }
 
 #glossier-feature {
-    background: url('/media/glossier-sunscreen.jpeg') no-repeat bottom 20% center;
+    background: url('/media/glossier-small-collect.webp') no-repeat bottom 20% center;
     background-size: cover;
 }
 
