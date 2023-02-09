@@ -21,9 +21,9 @@
         <div class="d-md-none d-lg-block col-12 col-lg-4">
             <div class="mb-5">
                 {% if brand.id == 1 %}
-                <img class="brand-feature w-100" src="/media/to-portrait-products.webp" alt="{{ brand.name }} background">
+                <img class="brand-feature w-100" src="/media/to-portrait-products.webp">
                 {% elif brand.id == 2 %}
-                <img class="brand-feature w-100" src="/media/glossier-portrait-img.webp" alt="{{ brand.name }} background">
+                <img class="brand-feature w-100" src="/media/glossier-portrait-img.webp">
                 {% endif %}
             </div>
         </div>
@@ -39,26 +39,44 @@
                 <div class="container-fluid px-4">
                     <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
                         <div class="carousel-inner row w-10 mxauto" role="listbox">
-                            {% for product in products %}
-                            <div class="carousel-item col-md-4 {% if forloop.first %} active {% endif %}">
-                                <div class="row">
+                            <div class="carousel-item col-md-4 active">
+                                <div href="{% url 'products' '5000169832/' %}" class="row">
                                     <div class="col-8">
-                                        {% if product.image %}
-                                        <img class="img-fluid mx-auto d-bloc" src="{{ product.image.url }}"
-                                            alt="{{ product.name }}">
-                                        {% else %}
-                                        <img class="card-img img-fluid" src="/media/noimage.png" alt="{{ product.name }}">
-                                        {% endif %}
+                                        <img class="img-fluid mx-auto d-bloc" src="/media/to-hyaluronic_Qa7qR0T.webp"
+                                            alt="slide 1">
                                     </div>
                                     <div class="col-4">
-                                        <a href="{% url 'product_detail' product.pk %}">
-                                        <p>{{ product.name }}</p>
+                                        <p>The Ordinary Hyaluronic Acid 2% + B5 30ml</p>
                                         <i class="fas fa-chevron-left mx-auto my-auto"></i>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            {% endfor %}
+                            <div class="carousel-item col-md-4">
+                                <img class="img-fluid mx-auto d-block" src="/media/to-lactic-serum.webp" alt="slide 2">
+                            </div>
+                            <div class="carousel-item col-md-4">
+                                <img class="img-fluid mx-auto d-block" src="/media/to-niacinimide.webp" alt="slide 3">
+                            </div>
+                            <div class="carousel-item col-md-4">
+                                <img class="img-fluid mx-auto d-block" src="/media/to-peeling-solution-mask.webp"
+                                    alt="slide 4">
+                            </div>
+                            <div class="carousel-item col-md-4">
+                                <img class="img-fluid mx-auto d-block" src="/media/to-vitamin-c-suspension.webp"
+                                    alt="slide 5">
+                            </div>
+                            <div class="carousel-item col-md-4">
+                                <img class="img-fluid mx-auto d-block" src="/media/to-hyaluronic_Qa7qR0T.webp"
+                                    alt="slide 6">
+                            </div>
+                            <div class="carousel-item col-md-4">
+                                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=7"
+                                    alt="slide 7">
+                            </div>
+                            <div class="carousel-item col-md-4">
+                                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=8"
+                                    alt="slide 7">
+                            </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
                             <i class="fa fa-chevron-left fa-lg text-muted"></i>
