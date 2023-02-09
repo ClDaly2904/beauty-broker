@@ -188,10 +188,11 @@ def brand_page(request, brand_id):
     ordinary featured brand """
 
     products = Product.objects.filter(brand=brand_id)
-    brand = Brand.objects.filter(name=brand_id)
+    brand = get_object_or_404(Brand, pk=brand_id)
 
     template = 'products/brand_page.html'
     context = {
         'products': products,
+        'brand': brand,
     }
     return render(request, template, context)

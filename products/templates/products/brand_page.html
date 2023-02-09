@@ -1,1 +1,44 @@
-hullo
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col text-center my-5">
+            <h2 class="logo-font">Why we love... {{ brand.friendly_name }}</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-md-none d-lg-block col-12 col-lg-4">
+            <div class="mb-5">
+                {% if brand.id == 1 %}
+                <img class="brand-feature w-100" src="/media/to-portrait-products.webp">
+                {% elif brand.id == 2 %}
+                <img class="brand-feature w-100" src="/media/glossier-portrait-img.webp">
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-lg-8 order-lg-last mb-5">
+            <h4 class="my-5 text-center"><span class="logo-font">" </span>{{ brand.ethos }}<span class="logo-font"> "</span></h4>
+            <p>{{ brand.brand_info|linebreaksbr }}</p>
+        </div>
+    </div>
+
+    <div class="shadow-sm pd-ks-button">
+        <a href="{% url 'products' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+            <i class="fas fa-chevron-left mx-auto my-auto"></i>
+            <small class="mx-auto my-auto">Keep Shopping</small>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

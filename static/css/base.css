@@ -255,6 +255,11 @@ a:hover {
 	color: #fff;
 }
 
+.brand-feature {
+    height: 25rem;
+    object-fit: cover;
+}
+
 /* -------------------------------- Media Queries */
 
 /* fixed top navbar only on medium and up */
