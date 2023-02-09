@@ -23,11 +23,26 @@ class Skin_Concern(models.Model):
         return friendly_name
 
 
+class Brand(models.Model):
+    name = models.CharField(max_length=100)
+    friendly_name = models.CharField(max_length=100, null=True, blank=True)
+    ethos = models.CharField(max_length=100, null=True, blank=True)
+    brand_info = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return friendly_name
+
+
 class Product(models.Model):
     product_type = models.ForeignKey('Product_Category', null=True, blank=True,
                                      on_delete=models.SET_NULL)
     skin_type = models.ForeignKey('Skin_Concern', null=True, blank=True,
                                   on_delete=models.SET_NULL)
+    brand = models.ForeignKey('Brand', null=True, blank=True,
+                              on_delete=models.SET_NULL)
     line_number = models.CharField(max_length=100, primary_key=True)
     name = models.CharField(max_length=100)
     description = models.TextField()

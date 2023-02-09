@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Product_Category, Skin_Concern
+from .models import Product, Product_Category, Skin_Concern, Brand
 from .forms import ProductForm
 
 
@@ -179,5 +179,19 @@ def delete_product(request, product_id):
     template = 'products/delete_product.html'
     context = {
         'product': product,
+    }
+    return render(request, template, context)
+
+
+def brand_page(request, brand_id):
+    """ A view for displaying information for the
+    ordinary featured brand """
+
+    products = Product.objects.filter(brand=brand_id)
+    brand = Brand.objects.filter(name=brand_id)
+
+    template = 'products/brand_page.html'
+    context = {
+        'products': products,
     }
     return render(request, template, context)

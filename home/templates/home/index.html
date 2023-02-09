@@ -22,7 +22,8 @@
                     <p class="col-md-8 fs-4">Shop the latest skincare products for skin that shows your inner glow.</p>
                     <p class="col-md-8 fs-4">We carefully selected our skincare range from top brands to make sure there
                         is the perfect product for every skin type.</p>
-                    <button class="btn shop-now-btn btn-lg mt-2" type="button" href="#">Shop skincare now</button>
+                    <a class="btn shop-now-btn btn-lg mt-2" type="button" href="{% url 'products' %}">Shop skincare
+                        now</a>
                 </div>
             </div>
 
@@ -33,7 +34,8 @@
                             <h2>The Ordinary</h2>
                             <p class="py-4">A collection of treatments offering effective, clinical
                                 technologies at low prices.</p>
-                            <button class="btn shop-now-btn" type="button">Shop The Ordinary</button>
+                            <a class="btn shop-now-btn" type="button" href="{% url 'brand_page' 1 %}">Shop The
+                                Ordinary</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +45,7 @@
                             <h2>Glossier</h2>
                             <p class="py-4">Shop accessible luxury products to make you look
                                 and feel good.</p>
-                            <button class="btn shop-now-btn" type="button">Shop Glossier</button>
+                            <a class="btn shop-now-btn" type="button" href="{% url 'brand_page' 2 %}">Shop Glossier</a>
                         </div>
                     </div>
                 </div>
