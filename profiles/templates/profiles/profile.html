@@ -36,7 +36,8 @@
                     <div class="card-header" id="headingOne">
                         <h4 class="mb-0">
                             <button class="btn text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseOne" class="collapse show" aria-expanded="true" aria-controls="collapseOne" id="pd-btn">
+                                data-target="#collapseOne" class="collapse show" aria-expanded="true"
+                                aria-controls="collapseOne" id="pd-btn">
                                 <h5>Order History: <span class="ml-2"><i class="fas fa-chevron-down"></i></span></h5>
                             </button>
                         </h4>
@@ -83,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="card-header" id="headingOne">
                         <h4 class="mb-0">
                             <button class="btn text-left" type="button" data-toggle="collapse"
@@ -95,9 +96,44 @@
 
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
+                            {% if wishlist %}
+                            {% for product in wishlist  %}
+
+                            <div class="mb-3 rounded-0">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <a href="{% url 'product_detail' product.pk %}">
+                                            {% if product.image %}
+                                                <img class="card-img rounded-0" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                            {% else %}
+                                                <img class="card-img rounded-0" src="/media/noimage.png" alt="{{ product.name }}">
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ product.name }}</h5>
+                                            <p class="card-text"><small class="text-muted">£{{ product.price}}</small>
+                                                {% if product.size %}
+                                                <small class="text-muted float-right">{{ product.size}}</small></p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="card-body">
+                                            <a type="button" class="btn btn-danger rounded-0 btn-sm"
+                                                href="{% url 'user_wishlist' product.pk %}">Remove from Wishlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            {% endfor %}
+                            {% else %}
+                            <p class="card-text">No products have been added to your wishlist yet</p>
+                            {% endif %}
                         </div>
                     </div>
-
                 </div>
             </div>
             <hr>
@@ -108,5 +144,5 @@
 
 {% block postloadjs %}
 {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}

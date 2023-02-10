@@ -57,6 +57,11 @@
                     </a>
                 </p>
                 {% endif %}
+                {% if request.user.is_authenticated %}
+                <div class="mt-3">
+                    <a href="{% url 'user_wishlist' product.pk  %}" class="wishlist" aria-disabled="true"><i class="far fa-heart wishlist-heart mr-1"></i> Add to Wish List</a>
+                </div>
+                {% endif %}
                 {% if request.user.is_superuser %}
                 <hr>
                 <div class="row">

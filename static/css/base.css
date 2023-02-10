@@ -162,6 +162,18 @@ a:hover {
     overflow-y: auto;
 }
 
+.wishlist {
+    color: #192524;
+}
+
+.wishlist:hover {
+    color: grey;
+}
+
+.wishlist-heart {
+    color: red;
+}
+
 #search-icon {
     background-color: #dccdc6;
     color: #192524;

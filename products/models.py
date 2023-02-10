@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Product_Category(models.Model):
@@ -52,6 +53,9 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     size = models.CharField(max_length=100, null=True, blank=True)
+    user_wishlist = models.ManyToManyField(User,
+                                           related_name="user_wishlist",
+                                           blank=True)
 
     def __str__(self):
         return self.name
