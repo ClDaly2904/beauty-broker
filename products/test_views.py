@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from django.urls import reverse
-from .models import Product, Product_Category, Skin_Concern
+from .models import Product, Product_Category, Skin_Concern, Brand
 
 
 class ProductDetailTestViews(TestCase):
@@ -29,6 +29,12 @@ class ProductDetailTestViews(TestCase):
             line_number='1',
         )
 
+        self.brand = Brand.objects.create(
+            name='test_brand',
+            friendly_name='Test Brand',
+            id=1,
+        )
+
         self.superuser = User.objects.create_superuser(
             'super', 'super@email.com', 'superpassword'
         )
@@ -43,6 +49,15 @@ class ProductDetailTestViews(TestCase):
         response = self.client.get('/products/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
+
+    def test_brand_pages(self):
+        """ Test brand pages load """
+
+        response = self.client.get(reverse(
+            'brand_page', args=[self.brand.id])
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'products/brand_page.html')
 
     def test_product_detail(self):
         """ Test product detail page load """
