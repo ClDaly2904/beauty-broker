@@ -8,7 +8,7 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        exclude = ('user_wishlist',)
+        exclude = ('user_wishlist', 'brand')
 
     image = (forms.ImageField(label='Image', required=False,
              widget=CustomClearableFileInput))
@@ -18,7 +18,6 @@ class ProductForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         categories = Product_Category.objects.all()
         skin_types = Skin_Concern.objects.all()
-        brands = Brand.objects.all()
 
         # get friendly name for each category
         prod_friendly_names = [(c.id, c.friendly_name) for c in categories]
@@ -26,14 +25,10 @@ class ProductForm(forms.ModelForm):
         # get friendly name for each skin type
         skin_friendly_names = [(c.id, c.friendly_name) for c in skin_types]
 
-        # get friendly name for each brand
-        brand_friendly_names = [(b.id, b.friendly_name) for b in brands]
-
         # set placeholders for input fields
         placeholders = {
             'product_type': 'Product Type',
             'skin_type': 'Skin Type',
-            'brand': 'Brand',
             'line_number': 'Line Number',
             'name': 'Product Name',
             'description': 'Product Description',
@@ -48,7 +43,6 @@ class ProductForm(forms.ModelForm):
         # render skincare categories based on friendly name
         self.fields['product_type'].choices = prod_friendly_names
         self.fields['skin_type'].choices = skin_friendly_names
-        self.fields['brand'].choices = brand_friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'rounded-0'
 
