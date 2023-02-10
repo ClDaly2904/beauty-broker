@@ -1,5 +1,4 @@
 from django.test import TestCase
-from .models import Product, Brand, Product_Category, Skin_Concern
 from .forms import ProductForm
 
 
