@@ -124,6 +124,27 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h4 class="mb-0">
+                                <button class="btn text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"
+                                    id="pd-btn">
+                                    Ingredients List <span class="ml-2"><i class="fas fa-chevron-down"></i></span>
+                                </button>
+                            </h4>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>{{ product.ingredients_list }}</p>
+                                <p class="text-muted"><small>Want to know more about a skincare ingredient? Look it up in this <a href="https://www.paulaschoice.com/ingredient-dictionary" target="_blank" aria-label="Paula's Choice Skincare Dictionary">skincare dictionary</a>.</small></p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -56,6 +56,7 @@ class Product(models.Model):
     user_wishlist = models.ManyToManyField(User,
                                            related_name="user_wishlist",
                                            blank=True)
+    ingredients_list = models.TextField()
 
     def __str__(self):
         return self.name

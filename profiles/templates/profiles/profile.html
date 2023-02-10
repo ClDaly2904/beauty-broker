@@ -85,16 +85,16 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="card-header" id="headingOne">
+                    <div class="card-header" id="headingTwo">
                         <h4 class="mb-0">
                             <button class="btn text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="pd-btn">
+                                data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" id="pd-btn">
                                 <h5>My Wishlist: <span class="ml-2"><i class="fas fa-chevron-down"></i></span></h5>
                             </button>
                         </h4>
                     </div>
 
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             {% if wishlist %}
                             {% for product in wishlist  %}
@@ -110,7 +110,7 @@
                                             {% endif %}
                                         </a>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                         <div class="card-body">
                                             <h5 class="card-title">{{ product.name }}</h5>
                                             <p class="card-text"><small class="text-muted">£{{ product.price}}</small>
@@ -119,10 +119,10 @@
                                             {% endif %}
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-3">
                                         <div class="card-body">
-                                            <a type="button" class="btn btn-danger rounded-0 btn-sm"
-                                                href="{% url 'user_wishlist' product.pk %}">Remove from Wishlist</a>
+                                            <small><a type="button" class="btn btn-outline-danger rounded-0 btn-sm"
+                                                href="{% url 'user_wishlist' product.pk %}">Remove from Wishlist</a></small>
                                         </div>
                                     </div>
                                 </div>

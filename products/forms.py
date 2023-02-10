@@ -37,6 +37,7 @@ class ProductForm(forms.ModelForm):
             'line_number': 'Line Number',
             'name': 'Product Name',
             'description': 'Product Description',
+            'ingredients_list': 'Ingredients List',
             'price': 'Price',
             'rating': 'Product Rating',
             'image_url': 'Image URL',
