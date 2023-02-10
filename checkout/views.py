@@ -168,6 +168,8 @@ def checkout_success(request, order_number):
         # save info as default for profile if box ticked
         if save_info:
             profile_data = {
+                'default_full_name': order.full_name,
+                'default_email': order.email,
                 'default_phone_number': order.phone_number,
                 'default_country': order.country,
                 'default_postcode': order.postcode,
