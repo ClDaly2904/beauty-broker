@@ -1,4 +1,5 @@
 asgiref==3.6.0
+backports.zoneinfo==0.2.1
 boto3==1.26.69
 botocore==1.29.69
 coverage==7.1.0
