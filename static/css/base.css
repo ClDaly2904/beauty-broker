@@ -191,6 +191,12 @@ a:hover {
     background-size: cover;   
 }
 
+.news-img {
+    height: 25rem;
+    background: url('/media/newsletter-image.webp') no-repeat center;
+    background-size: cover;    
+}
+
 .wishlist {
     color: #192524;
 }
@@ -201,6 +207,12 @@ a:hover {
 
 .wishlist-heart {
     color: red;
+}
+
+#mc_embed_signup {
+    background: #fff;
+    font: 14px;
+    width: 25rem;
 }
 
 #search-icon {
