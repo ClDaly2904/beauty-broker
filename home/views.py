@@ -19,3 +19,14 @@ def index(request):
     }
 
     return render(request, template, context)
+
+
+def newsletter(request):
+    """ A view to return the newsletter page """
+
+    template = 'home/newsletter.html'
+
+    context = {
+    }
+
+    return render(request, template, context)

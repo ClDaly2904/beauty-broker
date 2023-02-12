@@ -38,5 +38,25 @@
                 <a href="{% url 'products' %}?skin_type=mature_skin" class="dropdown-item">Mature skin</a>
             </div>
         </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="featured-brands-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Featured skincare brands
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="featured-brands-link">
+                <a href="{% url 'brand_page' 1 %}" class="dropdown-item">The Ordinary</a>
+                <a href="{% url 'brand_page' 2 %}" class="dropdown-item">Glossier</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="featured-brands-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Join the Beauty Brokerage
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="newsletter-skincare-advice-link">
+                <a href="{% url 'newsletter' %}" class="dropdown-item">Newsletter Signup</a>
+                <a href="" class="dropdown-item">Skincare Secrets</a>
+            </div>
+        </li>
     </ul>
 </div>
