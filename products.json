@@ -1,1 +1,691 @@
-[]
+[{
+    "model": "products.product_category",
+    "pk": 1,
+    "fields": {
+        "name": "cleansers",
+        "friendly_name": "Cleansers"
+    }
+}, {
+    "model": "products.product_category",
+    "pk": 2,
+    "fields": {
+        "name": "moisturisers",
+        "friendly_name": "Moisturisers"
+    }
+}, {
+    "model": "products.product_category",
+    "pk": 3,
+    "fields": {
+        "name": "toners",
+        "friendly_name": "Toners"
+    }
+}, {
+    "model": "products.product_category",
+    "pk": 4,
+    "fields": {
+        "name": "serums",
+        "friendly_name": "Serums"
+    }
+}, {
+    "model": "products.product_category",
+    "pk": 5,
+    "fields": {
+        "name": "sunscreens",
+        "friendly_name": "Sunscreens"
+    }
+}, {
+    "model": "products.product_category",
+    "pk": 6,
+    "fields": {
+        "name": "masks",
+        "friendly_name": "Masks"
+    }
+}, {
+    "model": "products.skin_concern",
+    "pk": 1,
+    "fields": {
+        "name": "dry_skin",
+        "friendly_name": "Dry skin"
+    }
+}, {
+    "model": "products.skin_concern",
+    "pk": 2,
+    "fields": {
+        "name": "oily_skin",
+        "friendly_name": "Oily skin"
+    }
+}, {
+    "model": "products.skin_concern",
+    "pk": 3,
+    "fields": {
+        "name": "combination_skin",
+        "friendly_name": "Combination skin"
+    }
+}, {
+    "model": "products.skin_concern",
+    "pk": 4,
+    "fields": {
+        "name": "blemish_prone_skin",
+        "friendly_name": "Blemish prone skin"
+    }
+}, {
+    "model": "products.skin_concern",
+    "pk": 5,
+    "fields": {
+        "name": "mature_skin",
+        "friendly_name": "Mature skin"
+    }
+}, {
+    "model": "products.brand",
+    "pk": 1,
+    "fields": {
+        "name": "the_ordinary",
+        "friendly_name": "The Ordinary",
+        "ethos": "Clinical formulations with integrity",
+        "brand_info": "The Ordinary's mission statement is to make skincare more accessible; protecting your skin is something that we should all be able to achieve, not a luxury that only a few can attain.\r\n\r\nThis brand owes its fame mainly to two elements: the quality and effectiveness of its products, formulated in a targeted way for the diverse needs of the different skin types, and the very competitive price.\r\n\r\nThe Ordinary has confirmed that it is truly cruelty-free. They don't test finished products or ingredients on animals, and neither do their suppliers or any third-parties."
+    }
+}, {
+    "model": "products.brand",
+    "pk": 2,
+    "fields": {
+        "name": "glossier",
+        "friendly_name": "Glossier",
+        "ethos": "Beauty products inspired by real life",
+        "brand_info": "We create the products you tell us you wish existed. We believe in thoughtful design, and enabling conversation (which is where it all starts). But most of all, we believe that beauty is about having fun, wherever you are in your journey. -wwww.glossier.com\r\n\r\nGlossier stands out in the beauty industry due to a unique direct relationship with their consumers. A key driver of this relationship is the authentic, two-way communication that is achieved via Into the Gloss and social media platforms. Glossier listens to its consumers about what they want to create the products we need."
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169129",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 4,
+        "brand": 1,
+        "name": "The Ordinary Niacinamide 10% Zinc 1%",
+        "description": "A universal serum for blemish-prone skin that smooths, brightens, and supports.",
+        "price": "8.00",
+        "rating": "4.9",
+        "image_url": null,
+        "image": "to-niacinimide.webp",
+        "size": "30ml",
+        "ingredients_list": "Aqua (Water), Niacinamide, Zinc Pca, Tamarindus Indica Seed Gum, Pentylene Glycol, Carrageenan, Acacia Senegal Gum, Xanthan Gum, PPG-26-Buteth-26, PEG-40 Hydrogenated Castor Oil, Ethoxydiglycol, Phenoxyethanol, Chlorphenesin",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016913",
+    "fields": {
+        "product_type": 6,
+        "skin_type": 5,
+        "brand": null,
+        "name": "Lume Illumination Face Mask",
+        "description": "The Illumination Mask contains kaolin clay - the most gentle clay on the planet, Kakadu Plum and Aloe Vera for a nourishing and hydrated glow.",
+        "price": "29.99",
+        "rating": "4.2",
+        "image_url": null,
+        "image": "lume-mask_MIAHHYZ.webp",
+        "size": "80ml",
+        "ingredients_list": "Water, Butylene Glycol, Propanediol, Glycerin, 1,2-Hexanediol, Carbomer, Tromethamine, Betaine, Xanthan Gum, Trehalose, Panthenol, Zeolite, Allantoin, Disodium EDTA, Polyglyceryl-10 Laurate, Dipropylene Glycol, Polyglyceryl-4 Laurate, Dipotassium Glycyrrhizate, Tocopheryl Acetate, Ethylhexylglycerin, Hydrolyzed Collagen, Hippophae Rhamnoides Fruit Extract, Ascorbyl Glucoside, Portulaca Oleracea Extract, Pentylene Glycol, Rosa Centifolia Flower Water, Caprylyl Glycol, Copper Tripeptide-1, Glutathione, Centella Asiatica Extract, Acetyl Hexapeptide-8, Beta-Glucan, Aloe Barbadensis Leaf Juice, Fragrance",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169132",
+    "fields": {
+        "product_type": 2,
+        "skin_type": 4,
+        "brand": null,
+        "name": "PROVEN Day Moisturiser with SPF",
+        "description": "From sensitivity, oil, acne, redness, hyperpigmentation, fine lines and more, our specially formulated moisturizer is tailored to meet your skin’s needs.",
+        "price": "45.00",
+        "rating": "3.4",
+        "image_url": null,
+        "image": "proven-spf.webp",
+        "size": null,
+        "ingredients_list": "Water, Zinc Oxide, C12-15 Alkyl Benzoate, Butyloctyl Salicylate, Isododecane, Lauryl PEG-8 Dimethicone, Polymethylsilsesquioxane, Octyldodecyl Neopentanoate, Propanediol, Caprylyl Methicone, Dimethicone, Niacinamide, Dimethiconol/​Propylsilsesquioxane/​Silicate Crosspolymer, Trilaureth-4 Phosphate, Allantoin, Bisabolol, Tocopherol, Sodium Chloride, Capryl Glycol, Ethylhexylglycerin, Hexylene Glycol, Phenoxyethanol, Tetrasodium Glutamate Diacetate, Lauryl PEG-10 Tris(Trimethylsiloxy)silylethyl Dimethicone, PEG-10, Sodium Hydroxide",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016919",
+    "fields": {
+        "product_type": 3,
+        "skin_type": 4,
+        "brand": null,
+        "name": "Mario Badescu Cucmber Toning Mist",
+        "description": "Known for their accessible formulas that do exactly what they promise, Mario Badescu boasts a sizeable arsenal of skin solutions. \r\nHarnessing quality ingredients, the now world-renowned brand offers answers to every skin concern imaginable and you can trust Mario Badescu's Facial Spray With Aloe, Cucumber And Green Tea boasts an invigorating infusion of restorative green tea and cooling peppermint essential water for a revived effect.",
+        "price": "11.99",
+        "rating": "2.4",
+        "image_url": null,
+        "image": "mario.webp",
+        "size": null,
+        "ingredients_list": "Aqua (Water/​Eau), Propylene Glycol, Mentha Piperita (Peppermint) Leaf Water, Cucumis Sativus (Cucumber) Fruit Water, Aloe Barbadensis Leaf Juice, Camellia Sinensis Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Fucus Vesiculosus Extract, Propanediol, Polysorbate 20, Ethylhexylglycerin, Benzophenone-4, Parfum (Fragrance), Sodium Chloride, Citric Acid, Potassium Sorbate, Sodium Benzoate, Ci 19140 (Yellow 5), Ci 42090 (Blue 1), Hexyl Cinnamal, Limonene, Linalool",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016920",
+    "fields": {
+        "product_type": 6,
+        "skin_type": 4,
+        "brand": 1,
+        "name": "The Ordinary AHA 30% BHA 2% Peeling Solution",
+        "description": "Alpha hydroxy acids (AHAs) exfoliate the skin’s topmost layer for a brighter, more even appearance, while beta hydroxy acids (BHAs) exfoliate the skin more deeply to clear pore congestion. Combined in one unique solution, these advanced acids offer extraordinary exfoliation to help battle blemishes and boost radiance.",
+        "price": "8.40",
+        "rating": "4.9",
+        "image_url": null,
+        "image": "peeling-solution.webp",
+        "size": "30ml",
+        "ingredients_list": "Glycolic Acid, Aqua (Water), Aloe Barbadensis Leaf Water, Sodium Hydroxide, Daucus Carota Sativa Extract, Propanediol, Cocamidopropyl Dimethylamine, Salicylic Acid, Potassium Citrate, Lactic Acid, Tartaric Acid, Citric Acid, Panthenol, Sodium Hyaluronate Crosspolymer, Tasmannia Lanceolata Fruit/​Leaf Extract, Glycerin, Pentylene Glycol, Xanthan Gum, Polysorbate 20, Trisodium Ethylenediamine Disuccinate, Potassium Sorbate, Sodium Benzoate, Ethylhexylglycerin, 1,2-Hexanediol, Caprylyl Glycol",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50001692129",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 5,
+        "brand": 1,
+        "name": "The Ordinary Vitamin C Suspension 23%",
+        "description": "Formulated as an antidote to ageing, this antioxidant-rich elixir is also enhanced with hyaluronic acid to hydrate and plump skin while brightening and improving uneven skin tone. Ideally applied at bedtime, this extraordinary treatment allows you to wake up to visibly luminous, younger-looking skin.",
+        "price": "8.00",
+        "rating": "4.5",
+        "image_url": null,
+        "image": "to-vitamin-c-suspension.webp",
+        "size": "30ml",
+        "ingredients_list": "N/A",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016923",
+    "fields": {
+        "product_type": 1,
+        "skin_type": 4,
+        "brand": null,
+        "name": "Tatcha The Camelia Cleansing Oil",
+        "description": "This moisturising 2-in-1 makeup remover and cleanser is formulated with camellia oil to gently remove even waterproof makeup, melt away excess oil, and nourish skin to feel softer than silk.",
+        "price": "45.00",
+        "rating": "3.6",
+        "image_url": null,
+        "image": "tatcha-camelia.webp",
+        "size": "150ml",
+        "ingredients_list": "Cetyl Ethylhexanoate, Oryza Sativa (Rice) Bran Oil, Polyglyceryl-10 Dioleate, Polyglyceryl-2 Sesquicaprylate, Camellia Japonica Seed Oil, Camellia Sinensis (Green Tea) Leaf Extract, Algae Extract, Water, Glyceryl Behenate/​Eicosadioate, Glycerin, Ethylhexylglycerin, Fragrance (Natural), Alcohol, Phenoxyethanol",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169341",
+    "fields": {
+        "product_type": 3,
+        "skin_type": 5,
+        "brand": null,
+        "name": "Elf SuperSmooth 4% AHA Toner",
+        "description": "Dull, lackluster skin meet the e.l.f. Skin's SuperSmooth 4% AHA Toner, a gently daily face toner that helps remove dead skin cells to reveal a more radiant, bright complexion. This chemical exfoliant is powered by glow-inducing glycolic acid, an Alpha Hydroxy Acid with low pH that helps tone, balance and clear skin.",
+        "price": "12.00",
+        "rating": "3.5",
+        "image_url": null,
+        "image": "elf-toner.webp",
+        "size": null,
+        "ingredients_list": "Water (Aqua), Aloe Barbadensis Leaf Juice, Glycolic Acid, Hamamelis Virginiana (Witch Hazel) Water, Glycerin, Butylene Glycol, Sodium PCA, Citrus Limon (Lemon) Peel Oil, Zinc Gluconate, Pentylene Glycol, PPG-26-Buteth-26, PEG-40 Hydrogenated Castor Oil, Xanthan Gum, Sodium Benzoate, Phenoxyethanol, Ethylhexylglycerin, Disodium EDTA, Sodium Hydroxide",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016938",
+    "fields": {
+        "product_type": 5,
+        "skin_type": 2,
+        "brand": null,
+        "name": "Everyday Body SPF",
+        "description": "A powerful SPF50 sun protection and body lotion duo with a lightweight and fast-absorbing formula to keep your skin safe from sunburn, pollution, dry skin and more.",
+        "price": "16.99",
+        "rating": "3.3",
+        "image_url": null,
+        "image": "everyday-spf.webp",
+        "size": "150ml",
+        "ingredients_list": "Water (Aqua), Cera Alba, C12-15 Alkyl Benzoate, PEG-15 Cocamine, Silica, Sodium Hyaluronate, Alteromonas Ferment Extract, Simmondsia Chinensis Seed Oil, Carthamus Tinctorius Seed Oil, Cucumis Sativus Fruit Extract, Camellia Sinensis Leaf Extract, Aloe Barbadensis Leaf Juice, Tocopheryl Acetate, Caprylyl Glycol, PEG-40 Stearate, Butylene Glycol, Hydroxyethylcellulose, Carbomer, Caprylhydroxamic Acid, Glycerin, Triethanolamine, Parfum*\r\n*Natural Fragrance",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169384",
+    "fields": {
+        "product_type": 2,
+        "skin_type": 5,
+        "brand": null,
+        "name": "Botanics All Bright Hydrating Moisturiser",
+        "description": "This lightweight moisturiser is powered by natural AHAs (that stands for alpha hydroxy acids) found in the hibiscus flower to help gently exfoliate skin and supercharge your glow whilst keeping skin hydrated for up to 12 hours. 84% of people said they saw an instant improvement in skin texture after using this moisturiser.",
+        "price": "8.00",
+        "rating": "3.8",
+        "image_url": null,
+        "image": "botanics.webp",
+        "size": "50ml",
+        "ingredients_list": "Aqua (Water), Glycerin, Cetearyl Olivate, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Sorbitan Olivate, Cetearyl Alcohol, Sodium Polyacrylate, Phenoxyethanol, Xanthan Gum, Caprylyl Glycol, Parfum (Fragrance), Sodium Benzoate, Tocopheryl Acetate, Citric Acid, Panax Ginseng Root Extract, Ethylhexylglycerin, Hexylene Glycol, Tetrasodium EDTA, Limonene, Hexyl Cinnamal, Maltodextrin, Linalool, Silica, Citronellol, Camellia Sinensis Leaf Extract",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016939",
+    "fields": {
+        "product_type": 2,
+        "skin_type": 1,
+        "brand": null,
+        "name": "Neutrogena HydroBoost Moisturiser",
+        "description": "Experience refreshing hydration with Neutrogena Hydroboost Gel Cream Moisturiser, an oil and fragrance-free moisturiser that intensively replenishes skin.\r\n\r\nRecommended for extra-dry skin, the cream delivers a refreshing veil of hydration and contains a unique Hyaluronic Gel Matrix that locks in and continuously releases hydration when needed throughout the day. Skin is left feeling supple with a youthful bounce.",
+        "price": "13.99",
+        "rating": "3.9",
+        "image_url": null,
+        "image": "neutrogena.webp",
+        "size": "50ml",
+        "ingredients_list": "Aqua, Dimethicone, Glycerin, Cetearyl Olivate, Sodium Hyaluronate, Dimethicone/​Vinyl Dimethicone Crosspolymer, Ethylhexylglycerin, Dimethiconol, Synthetic Beeswax, Sorbitan Olivate, Laureth-7, C12-14 Pareth-12, Polyacrylamide, Dimethicone Crosspolymer, Carbomer, C13-14 Isoparaffin, Sodium Hydroxide, Phenoxyethanol, Chlorphenesin, Methylparaben, Benzoic Acid",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016943",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 4,
+        "brand": 1,
+        "name": "The Ordinary Lactic Acid 10% + HA 2%",
+        "description": "Formulated to provide mild exfoliation, the Lactic Acid 10% + HA 2% Superficial Peeling Formulation from The Ordinary promotes a smoother, more evenly-toned complexion. \r\n\r\nThe serum is fortified lactic acid, an exfoliating alpha hydroxy acid (AHA), to help improve the appearance of pigmentation, uneven skin tone and texture.",
+        "price": "8.00",
+        "rating": "4.8",
+        "image_url": null,
+        "image": "to-lactic-serum.webp",
+        "size": "30ml",
+        "ingredients_list": "Aqua (Water), Lactic Acid, Glycerin, Pentylene Glycol, Propanediol, Sodium Hydroxide, Sodium Hyaluronate Crosspolymer, Tasmannia Lanceolata Fruit/​Leaf Extract, Acacia Senegal Gum, Xanthan Gum, Isoceteth-20, Trisodium Ethylenediamine Disuccinate, Ethylhexylglycerin, 1,2-Hexanediol, Caprylyl Glycol",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169432",
+    "fields": {
+        "product_type": 5,
+        "skin_type": 4,
+        "brand": null,
+        "name": "La Rosche Posay Anthelios Sunscreen",
+        "description": "The formula is water, sweat and sand resistant for long-lasting, ultra-high protection. Designed with comfort in mind, the cream hydrates skin without feeling greasy.\r\n\r\nFragrance-free and with a gentle, anti-eye-stinging formula, the SPF showcases the best of the brand’s skincare technology, tested for efficacy and mildness.",
+        "price": "19.00",
+        "rating": "4.5",
+        "image_url": null,
+        "image": "anthelios.webp",
+        "size": "50ml",
+        "ingredients_list": "Aqua/​Water, Homosalate, Glycerin, Ethylhexyl Salicylate, Alcohol, Octocrylene, Butyl Methoxydibenzoylmethane, Propylene Glycol, Titanium Dioxide, Isohexadecane, Ethylhexyl Triazone, Potassium Cetyl Phosphate, Glyceryl Isostearate, Synthetic Wax, Acrylates/​C10-30 Alkyl Acrylate Crosspolymer, Aluminum Hydroxide, Caprylyl Glycol, Disodium EDTA, Glyceryl Stearate, Palmitic Acid, PEG-100 Stearate, Phenoxyethanol, Stearic Acid, Stearyl Alcohol, Terephthalylidene Dicamphor Sulfonic Acid, Tocopherol, Triethanolamine, Xanthan Gum",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169463",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 1,
+        "brand": 2,
+        "name": "Glossier Super Serum Duo",
+        "description": "For enhanced hydration, apply Super Bounce, a Hyaluronic Acid + Vitamin b5 serum that boosts moisture and eases any tight, dry feeling skin may have\r\n\r\nFor a smoother, more even tone, use Super Glow, a Vitamin C + Magnesium serum that nourishes and energizes so skin looks fresh, recharged, and glowy",
+        "price": "48.00",
+        "rating": "4.2",
+        "image_url": null,
+        "image": "super-serum-duo.webp",
+        "size": null,
+        "ingredients_list": "Water/​Aqua/​Eau, Niacinamide, Glycerin, Propanediol, Zinc Pca, Lonicera Japonica (Honeysuckle) Flower Extract, Lonicera Caprifolium (Honeysuckle) Extract, Citric Acid, Allantoin, Hydroxyethylcellulose, Polysorbate 60, Disodium Phosphate, Sodium Phosphate\r\n\r\nAqua/​Water/​Eau, Magnesium Ascorbyl Phosphate 5.0%, Propanediol, Dimethicone, Glyceryl Stearate SE, Polyglyceryl-10 Oleate, Caprylic/​Capric Triglyceride, Cetyl Alcohol, Glycerin, Magnesium Pca, Simmondsia Chinensis (Jojoba) Seed Oil, Butyrospermum Parkii (Shea) Butter, Helianthus Annuus (Sunflower) Seed Oil, Evodia Rutaecarpa Fruit Extract, Melia Azadirachta Flower Extract, Melia Azadirachta Leaf Extract, Corallina Officinalis Extract, Coccinia Indica Fruit Extract, 1,2-Hexanediol, Sodium Stearoyl Lactylate, Betaine, Sodium Citrate, Xanthan Gum, Caprylhydroxamic Acid",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016954",
+    "fields": {
+        "product_type": 3,
+        "skin_type": 4,
+        "brand": 2,
+        "name": "Glossier The Solution",
+        "description": "Unlike physical scrubs, Solution uses a 10% blend of skincare acids to “unglue” dead skin and sweep it away, so your complexion appears smoother, softer, and glowier\r\nIncludes three acid groups: Alpha Hydroxy Acid (AHA), Beta Hydroxy Acid (BHA), and Polyhydroxy Acid (PHA)\r\nDaily use helps improve the appearance of blemishes, visible redness, and enlarged pores",
+        "price": "21.00",
+        "rating": "4.3",
+        "image_url": null,
+        "image": "glossier-solution.webp",
+        "size": "150ml",
+        "ingredients_list": "Active Ingredients: Salicylic Acid (0.5%)\r\nInactive Ingredients: Aqua/​Water/​Eau, Sodium Hydroxide, Lactic Acid, Glycolic Acid, Gluconolactone, Propanediol, Ethoxydiglycol, Magnesium Chloride, Glycereth-7 Trimethyl Ether, Niacinamide, Betaine, Inositol, Citric Acid, Glycerin, Phytic Acid, Pentylene Glycol, Peg-60 Hydrogenated Castor Oil, Caprylyl Glycol, Ethylhexylglycerin, Parfum/​Fragrance, Peg-8, Aloe Barbadensis Leaf Juice, Acetic Acid, Potassium Hydroxide",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016965",
+    "fields": {
+        "product_type": 2,
+        "skin_type": 4,
+        "brand": null,
+        "name": "La Rosche Posay Effaclar Duo Set",
+        "description": "A dermatologist recommended 2-step skincare regime for oily, blemish-prone skin. This 2-step kit is clinically proven to reduce the appearance of blemishes, unclog pores and reduce pore size whilst hydrating skin and reducing the appearance of marks. Visibly clearer skin in 4 weeks. For use morning and night as your daily routine.",
+        "price": "36.00",
+        "rating": "4.9",
+        "image_url": null,
+        "image": "effaclar.webp",
+        "size": null,
+        "ingredients_list": "Aqua/​Water, Glycerin, Dimethicone, Isocetyl Stearate, Niacinamide, Isopropyl Lauroyl Sarcosinate, Silica, Ammonium Polyacryloyldimethyl Taurate, Methyl Methacrylate Crosspolymer, Potassium Cetyl Phosphate, Sorbitan Oleate, Zinc Pca, Glyceryl Stearate SE, Isohexadecane, Sodium Hydroxide, Myristyl Myristate, 2-Oleamido-1,3-Octadecanediol, Aluminum Starch Octenylsuccinate, Mannose, Poloxamer 338, Disodium EDTA, Capryloyl Salicylic Acid, Caprylyl Glycol, Vitreoscilla Ferment, Xanthan Gum, Polysorbate 80, Acrylamide/​Sodium Acryloyldimethyltaurate Copolymer, Salicylic Acid, Piroctone Olamine, Parfum/​Fragrance",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169705",
+    "fields": {
+        "product_type": 5,
+        "skin_type": 2,
+        "brand": null,
+        "name": "Sunny Skin Super Sun SPF50",
+        "description": "A daily mineral face sunscreen that leaves your skin with a dewy, glowy finish. Super Sun is the perfect skin prep for everyday makeup, with added antioxidants & skin nutrition.",
+        "price": "34.00",
+        "rating": "3.6",
+        "image_url": null,
+        "image": "sunny-skin.webp",
+        "size": "50ml",
+        "ingredients_list": "Zinc Oxide, Candelilla Wax, Castor Oil, Coco-Caprylate, Coconut Oil, D-Alpha Tocopheryl Acetate, Isostearic Acid, Medium-Chain Triglycerides, Polyglyceryl-3 Polyricinoleate, Simmondsia Chinensis, Solanum Lycocarpum Fruit Extract, Squalane",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50001697584",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 1,
+        "brand": null,
+        "name": "Element Apothic Serum",
+        "description": "This rich cream uniquely blends ginseng stem cells, gemstones, hyaluronic acid, and essential oils to create a powerful formula that works to renew, detoxify and deeply hydrate your skin. Your skin is left looking brighter and firmer with a healthy glowing complexion.",
+        "price": "39.00",
+        "rating": "3.7",
+        "image_url": null,
+        "image": "element-apothic-serum.webp",
+        "size": "50ml",
+        "ingredients_list": "hippophae rhamnoides (sea buckthorn) seed oil, moringa oleifera seed oil, crambe abyssinica (absynnian) seed oil, helianthus annuus (sunflower) seed oil, rosa canina (rosehip) fruit oil, rubus idaeus (raspberry) seed oil, tocopherol (vitamin e) oil, cannabis sativa (hemp) flower/leaf/stem extract, lilium candidum (lily) oil, rosa damascena (rose) distillate, nelumbo nucifera (lotus) extract, jasminum officinale (jasmine) flower extract, cananga odorata (ylang ylang) flower oil, rosa damascena (rose) flower oil, melaleuca ericifolia (rosalina) oil, michelia champaca flower oil, daucus carota sativa (carrot) seed oil, pelargonium graveolens (geranium) flower oil, citrus aurantium bergamia (bergamot) fruit oil, cannabigerol (cbg) isolate",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169768",
+    "fields": {
+        "product_type": 5,
+        "skin_type": 2,
+        "brand": 2,
+        "name": "Glossier Invisible Shield",
+        "description": "A lightweight SPF 35 water-gel formula that feels like a serum and protects against sunburn.",
+        "price": "27.99",
+        "rating": "2.9",
+        "image_url": null,
+        "image": "invisible-shield.webp",
+        "size": "100ml",
+        "ingredients_list": "Active Ingredients: Avobenzone (3%), Homosalate (6%), Octisalate (5%)\r\nInactive Ingredients: Water, Butyloctyl Salicylate, Dipropylene Glycol, Methyl Trimethicone, Biosaccharide Gum-4, Caprylyl Methicone, Propanediol, Bis-Ethylhexyl Hydroxydimethoxy Benzylmalonate, Betaine, Acrylates Copolymer, Ammonium Acryloyldimethyltaurate/​Vp Copolymer, Hydroxyacetophenone, Phenoxyethanol, Hydrolyzed Wheat Protein/​Pvp Crosspolymer, Dibutyl Lauroyl Glutamide, Dibutyl Ethylhexanoyl Glutamide, Citrus Aurantium Dulcis (Orange) Peel Oil, Dipotassium Glycyrrhizate, Carbomer, Tocopheryl Acetate, Aminomethyl Propanol, Butylene Glycol, Hippophae Rhamnoides Fruit Extract, Disodium Edta, Pentylene Glycol, Aloe Barbadensis Leaf Extract, Silica, Bioflavonoids, Potassium Sorbate, Hydroxyphenyl Propamidobenzoic Acid, Brassica Oleracea Italica (Broccoli) Extract, Ethylhexylglycerin, Camellia Sinensis Leaf Extract, Ascorbyl Palmitate",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50001698035",
+    "fields": {
+        "product_type": 1,
+        "skin_type": 5,
+        "brand": null,
+        "name": "Derma E Vitamin C Cleanser",
+        "description": "Vitamin C is a proven anti-ageing ingredient that helps to brighten and smooth the skin, protecting it from environmental aggressors that can lead to collagen breakdown, wrinkles and sagging. Within this brilliant foaming face wash, Golden Turmeric and Ancient Rice bring anti-inflammatory, antibacterial and purifying properties. By removing dirt and dead cells, it leaves your skin brighter, smoother and glowing.",
+        "price": "17.00",
+        "rating": "3.3",
+        "image_url": null,
+        "image": "derma-e.webp",
+        "size": null,
+        "ingredients_list": "Water (Aqua), Sodium Methyl Cocoyl Taurate, Cocamidopropyl Hydroxysultaine, Cocamidopropyl Betaine, Disodium Laureth Sulfosuccinate, Ascorbyl Palmitate (Vitamin C), Sodium Ascorbyl Phosphate, Glycerin (Vegetable Derived), Panthenol (Provitamin B5), Niacinamide, Allantoin, Glyceryl Laurate, Glycolic Acid, Glycyrrhiza Glabra (Licorice) Root Extract, Camellia Sinensis (Green Tea) Leaf Extract, Arctostaphylos Uva-Ursi (Bearberry) Leaf Extract, Retinol, Polysorbate 20, Bakuchiol, Lilium Candidum Leaf Cell Extract, Citrus Aurantium Dulcis (Orange) Oil, Sodium Hydroxide, Potassium Sorbate, Phenoxyethanol, Ethylhexylglycerin",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50001698123",
+    "fields": {
+        "product_type": 6,
+        "skin_type": 1,
+        "brand": null,
+        "name": "Faberlic Global Oxygen Face Mask",
+        "description": "Your skin needs energy! An innovative beauty series with maximum concentration of oxygen complex, Global Oxygen is an endless source of energy for skin self-renewal.",
+        "price": "35.00",
+        "rating": "3.9",
+        "image_url": null,
+        "image": "oxygen-faberlic.webp",
+        "size": "50ml",
+        "ingredients_list": "Aqua, Caprylic/​Capric Triglyceride, Glycerin, Cetearyl Alcohol, Macadamia Ternifolia Seed Oil, Dicaprylyl Carbonate, Polyglyceryl-3 Methylglucose Distearate, Cyclopentasiloxane, Ethylhexyl Hydroxystearate, C12-13 Alkyl Lactate, Butyrospermum Parkii Butter, Sesamum Indicum Seed Oil, Dimethicone, Glyceryl Stearate, PEG-100 Stearate, Perfluorodecalin, Poloxamer 188, Polyperfluoromethylisopropyl Ether, Turmerone, Tetrahydrodiferuloylmethane, Panthenol, Tocopheryl Acetate, Chlorella Vulgaris Extract, Glycolic Acid, Lactic Acid, Polyvinyl Alcohol, Heptapeptide-15 Palmitate, Allantoin, Sodium PCA, Betaine, Sorbitol, Glycine, Alanine, Proline, Serine, Threonine, Arginine, Lysine, Glutamic Acid, Benzylsulfonyl D-Seryl Homophenylalanine Amidinobenzamide Acetate, Glyceryl Acrylate/​Acrylic Acid Copolymer, Pvm/​Ma Copolymer, Xanthan Gum, Acrylates/​C10-30 Alkyl Acrylate Crosspolymer, Disodium EDTA, Lecithin, Ethoxydiglycol, Phenoxyethanol, Propylene Glycol, Methylparaben, Ethylparaben, Propylparaben, Caprylyl Glycol, Ethylhexylglycerin, Citric Acid, Parfum, Limonene, Butylphenyl Methylpropional",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169832",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 1,
+        "brand": 1,
+        "name": "The Ordinary Hyaluronic Acid 2% + B5",
+        "description": "Penetrating the skin to reach its deeper layers, The Ordinary's Hyaluronic Acid 2% + B5 delivers lasting hydration and offers visible plumping and moisture retention so that skin looks smoother, softer and healthier.\r\n\r\nThe hyaluronic acid at the centre of this super serum attracts up to 1000 times its weight in water, while a brilliant boost of vitamin B5 heals dry and damaged areas by stabilising the skin's barrier function and promoting the growth of stronger tissue. After taking the beautysphere by storm (read: intense hurricane), The Ordinary even released a {bigger size} – so you can spend even longer with your beloved skin-boosting formula between empties.",
+        "price": "7.90",
+        "rating": "4.2",
+        "image_url": null,
+        "image": "to-hyaluronic_Qa7qR0T.webp",
+        "size": "30ml",
+        "ingredients_list": "Aqua (Water), Sodium Hyaluronate, Pentylene Glycol, Propanediol, Sodium Hyaluronate Crosspolymer, Panthenol, Ahnfeltia Concinna Extract, Glycerin, Trisodium Ethylenediamine Disuccinate, Citric Acid, Isoceteth-20, Ethoxydiglycol, Ethylhexylglycerin, Hexylene Glycol, 1,2-Hexanediol, Phenoxyethanol, Caprylyl Glycol",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50001698345",
+    "fields": {
+        "product_type": 1,
+        "skin_type": 5,
+        "brand": null,
+        "name": "Elemis Superfood Facial Wash",
+        "description": "The ELEMIS Superfood Facial Wash is a nourishing facial wash that revives and refreshes whilst deeply cleansing the skin. Formulated with nutrient-dense Superfoods offering a balanced diet of active ingredients for an outdoor-fresh glow.",
+        "price": "33.00",
+        "rating": "3.8",
+        "image_url": null,
+        "image": "superfood.webp",
+        "size": "120ml",
+        "ingredients_list": "Aqua/​Water/​Eau, Sodium Lauroyl Sarcosinate, Glycerin, Cocamidopropyl Betaine, Acrylates Copolymer, Polysorbate 20, Sodium Lactate, Coco-Glucoside, Glyceryl Oleate, Dicaprylyl Ether, Lauryl Alcohol, Sodium Chloride, Phenoxyethanol, Xanthan Gum, Persea Gratissima (Avocado) Oil, Chlorphenesin, Sodium Hydroxide, Citric Acid, Fragrance (Parfum), Alpha-Glucan Oligosaccharide, Brassica Oleracea Italica (Broccoli) Seed Oil, Cucurbita Pepo (Pumpkin) Seed Oil, Galactoarabinan, Disodium EDTA, Salvia Hispanica Seed Oil, Limonene, Citrus Aurantium Dulcis (Orange) Peel Oil, Sodium Dehydroacetate, Caramel, Amyris Balsamifera Bark Oil, Urtica Dioica (Nettle) Juice, Cymbopogon Martini Oil, Geraniol, Linalool, Rosmarinus Officinalis (Rosemary) Leaf Oil, Daucus Carota Sativa (Carrot) Seed Oil, Brassica Oleracea Acephala (Kale) Leaf Extract, Triticum Aestivum (Wheatgrass) Leaf Extract, Magnesium Aspartate, Zinc Gluconate, Maltodextrin, Polyglyceryl-3 Diisostearate, Chlorophyllin-Copper Complex, Hydrogenated Palm Glycerides Citrate, Tocopherol, Copper Gluconate, Sodium Benzoate, Potassium Sorbate, Ascorbic Acid",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016989",
+    "fields": {
+        "product_type": 3,
+        "skin_type": 3,
+        "brand": null,
+        "name": "Laneige Balancing Toner",
+        "description": "It is a refreshing water type emulsion that’s light and easy to wipe off and gets absorbed into the skin.\r\nIt provides moisture to unbalanced oily skin making it feel refreshed.",
+        "price": "14.00",
+        "rating": "3.9",
+        "image_url": null,
+        "image": "laneige-balancing-toner-pink.webp",
+        "size": "200ml",
+        "ingredients_list": "Water, Propanediol, 1,2-Hexanediol, PPG-13-Decyltetradeceth-24, Butylene Glycol, Sea Water/​Maris Aqua/​Eau De Mer, Ethylhexylglycerin, Disodium EDTA, Litchi Chinensis Pericarp Extract, Tocopherol",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50001699",
+    "fields": {
+        "product_type": 1,
+        "skin_type": 3,
+        "brand": 2,
+        "name": "Glossier Milk Jelly Cleanser",
+        "description": "A nourishing (and pH-balanced), creamy gel face wash that’s kind to every skin type under the sun.",
+        "price": "17.99",
+        "rating": "3.7",
+        "image_url": null,
+        "image": "glossier-jelly.webp",
+        "size": "175ml",
+        "ingredients_list": "Water/​Aqua/​Eau, Rosa Damascena Flower Water, PEG-7 Glyceryl Cocoate, Propanediol, Isohexadecane, Poloxamer 184, Acrylamide/​Sodium Acryloyldimethyltaurate Copolymer, Xylitylglucoside, Betaine, Allantoin, Glycerin, Panthenol, Symphytum Officinale Root Extract, Sodium Hyaluronate, Anhydroxylitol, Polysorbate 80, Xylitol, Ammonium Polyacryloyldimethyl Taurate, Isopropyl Myristate, Benzoic Acid, Ethylhexylglycerin, Sodium Hydroxide",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "500016993",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 5,
+        "brand": null,
+        "name": "Evela Rosehip Oil",
+        "description": "Repairs and regenerates damaged skin.\r\nHydrates and Moisturises.\r\nImproves appearance of scars and stretchmarks.\r\nNourishes Skin.\r\nImproves skin elasticity.\r\nSmooths skin.\r\nHydrates dry, itchy skin.\r\nCombats signs of aging.",
+        "price": "18.00",
+        "rating": "3.8",
+        "image_url": null,
+        "image": "rosehip-oil.webp",
+        "size": "50ml",
+        "ingredients_list": "(Unrefined Cold Pressed) Rosehip Oil",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000169975",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 1,
+        "brand": null,
+        "name": "Good Skin Hydration Serum",
+        "description": "Purified water alternative ocean deep water 75%.\r\nRich in minerals, allowing moisturization, revitalization and soothing effect on the skin.",
+        "price": "15.00",
+        "rating": "3.5",
+        "image_url": null,
+        "image": "good-skin-serum.webp",
+        "size": "30ml",
+        "ingredients_list": "Aqua (Carrier), Glycerin (Humectants), Butylene Glycol (Skin-Conditioner), Squalane (Skin-Conditioner), Sodium Stearoyl Glutamate (Emulsifier), Ammonium Acryloyldimethyltaurate/VP Copolymer (Viscosity Controlling), Dipropylene Glycol (Solvents), Ceramide NP (Skin-Conditioner), Caprylic/Capric Triglyceride (Skin-Conditioner), Cholesterol (Skin-Conditioner), Phytosphingosine (Skin-Conditioner), Stearic Acid (Skin-Conditioner), Oleic Acid (Skin-Conditioner), Hydroxyacetophenone (Antioxidants), Polyglyceryl-4 Oleate (Emollient), Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer (Viscosity Controlling), Hydrogenated Lecithin (Emulsifier), Caprylyl Glycol (Preservative), Glyceryl Oleate (Skin-Conditioner), Lactic Acid (pH Adjusters), Ethylhexylglycerin (Skin-Conditioner), Hydrogenated Rapeseed Alcohol (Emulsion Stabilizers), Sorbitan Isostearate (Surfactants), Sodium Phytate (Chelating Agents), Xanthan Gum (Viscosity Controlling), Dipotassium Glycyrrhizate (Skin-Conditioner), Tocopherol (Antioxidant), Caprylhydroxamic Acid (Chelating Agents)",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50001967",
+    "fields": {
+        "product_type": 1,
+        "skin_type": 2,
+        "brand": null,
+        "name": "Tatcha The Deep Cleanse",
+        "description": "Enjoy soft, hydrated skin with Tatcha The Deep Cleanse, an oil-free facial wash that provides skin with a deep, gentle exfoliation with the help of natural luffa fruit. Lifting away dirt and minimising excess oil, this cleanser works to unclog and tighten the look of pores.\r\n\r\nThe gel formula lathers into a creamy foam to rinse away dirt and oil without over-drying the skin. Kind enough for even the most delicate skin, this gentle skincare formula also features amino acids derived from silk for a refreshed and comfortably hydrated complexion",
+        "price": "41.00",
+        "rating": "4.3",
+        "image_url": null,
+        "image": "tatcha-deep.webp",
+        "size": "150ml",
+        "ingredients_list": "Aqua/​Water/​Eau, Sodium Cocoyl Glutamate, Propanediol, Glycerin, Acrylates Copolymer, Coco-Betaine, Saccharomyces/​Camellia Sinensis Leaf/​Cladosiphon Okamuranus/​Rice Ferment Filtrate, Luffa Cylindrica Fruit/​Leaf/​Stem Extract, Luffa Cylindrica Fruit, Sodium Lauroyl Hydrolyzed Silk, Rosa Multiflora Fruit Extract, Belamcanda Chinensis Root Extract, Potassium Hydroxide, Sodium Chloride, Polyglyceryl-10 Dioleate, Polyglyceryl-2 Sesquicaprylate, Butylene Glycol, Ethylhexylglycerin, Tetrasodium Edta, Parfum/​Fragrance, Alcohol, Phenoxyethanol",
+        "user_wishlist": [2]
+    }
+}, {
+    "model": "products.product",
+    "pk": "50001968",
+    "fields": {
+        "product_type": 3,
+        "skin_type": 1,
+        "brand": null,
+        "name": "Isntree Hyularonic Acid Toner",
+        "description": "INSTREE Hyaluronic Acid Toner Plus is a deeply moisturising toner with a dense texture and powerful formula. It hydrates dry, flaky and tight skin with abundant moisture and nutrients until it’s plump, firm and rejuvenated with a smooth texture. The 5 hyaluronic acids penetrate your skin completely, providing moisture at every level instantly with varying molecule sizes. The toner also contains cooling aloe barbedensis extract, soothing Centella Asiatica extract, and green tea antioxidants to protect your skin too. Use this toner to energise your skin with moisture and provide protective nutrients to lock in hydration for longer.",
+        "price": "16.00",
+        "rating": "4.7",
+        "image_url": null,
+        "image": "isntree.webp",
+        "size": "200ml",
+        "ingredients_list": "Water, Propanediol, 1,2-Hexanediol, Sodium Hyaluronate, Trehalose, Sodium PCA, Biosaccharide Gum-1, Glycerin, Hyaluronic Acid, Camellia Sinensis Leaf Extract, Glycyrrhiza Glabra Root Extract, Chamomilla Recutita Flower Extract, Rosmarinus Officinalis Leaf Extract, Polygonum Cuspidatum Root Extract, Centella Asiatica Extract, Aloe Barbadensis Leaf Extract, Althaea Rosea Root Extract, Betula Alba Juice, Portulaca Oleracea Extract, Hydrolyzed Hyaluronic Acid, Hydrolyzed Sodium Hyaluronate, Sodium Hyaluronate Crosspolymer, Beta-Glucan, Betaine, Panthenol, Cellulose Gum, Pentylene Glycol, Caprylyl Glycol, Butylene Glycol, Ethylhexylglycerin, Scutellaria Baicalensis Extract",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "5000198398",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 3,
+        "brand": null,
+        "name": "Poko Luxury Facial Oil",
+        "description": "A luxury CBD facial oil that is rich in omega fatty acids to help promote skin softness and plumpness. Designed to repair the skin’s natural moisture barrier, which stops free radicals.",
+        "price": "18.00",
+        "rating": null,
+        "image_url": null,
+        "image": "poko.webp",
+        "size": null,
+        "ingredients_list": "Crambe seed oil (abyssinica), pomegranate oil (punica granatum), CBD isolate (300mg), moringa oil (moringa oleifera), baobab oil (adansonia digitata), rose essential oil (rosa damascena), neroli essential oil (citrus aurantium), sandalwood essential oil (santalum spicatum), lavender essential oil (lavandula angustifolia), frankincense essential oil (boswellia carteri), ylang ylang essential oil (cananga odorata),geranium essential oil (pelargonium roseum), orange essential oil (citrus sinensis).",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50016914",
+    "fields": {
+        "product_type": 3,
+        "skin_type": 1,
+        "brand": null,
+        "name": "Pearlessence Face Mist",
+        "description": "Formulated with coconut water, which rehydrates the skin and provides a new glow; rose, which is hydrating, high in antioxidants and great at reducing redness and inflammation and aloe vera, which is light, healing and hydrating.",
+        "price": "17.99",
+        "rating": "3.2",
+        "image_url": null,
+        "image": "pearlessance.webp",
+        "size": "100ml",
+        "ingredients_list": "Water, Rosa Centifolia Flower Water Extract, Glycerin, Aloe Vera Leaf Juice, Witch Hazel Distillate, Coconut Water, PEG-12 Dimethicone, Polysorbate 20, Ethylhexylglycerin, Phenoxyethanol, Disodium EDTA, Benzophenone-4, Red 40, Fragrance",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50016915",
+    "fields": {
+        "product_type": 6,
+        "skin_type": 3,
+        "brand": null,
+        "name": "Herbivore Prism Face Mask",
+        "description": "Designed for weekly use, this mask contains 20% AHAs and 5% BHA, both of which are fruit-based. Together, these blends work to exfoliate dull, dead skin cells to reveal a brighter complexion. To keep the skin feeling supple and moisturised, a blend of rosewater and aloe vera help to deliver hydration.\r\n\r\nThe Herbivore Prism 20% AHA + 5% BHA Exfoliating Glow Facial can be used up to twice each week. Begin by applying a thin layer to cleansed skin, then leave to take effect for 10-15 minutes. Finally, rinse thoroughly with warm water.",
+        "price": "52.99",
+        "rating": "4.8",
+        "image_url": null,
+        "image": "herb-mask.webp",
+        "size": "60ml",
+        "ingredients_list": "Aloe Barbadensis Leaf Juice, Vaccinium Myrtillus Fruit/​Leaf Extract, Glycerin, Rosa Damascena Flower Water, Terminalia Ferdinandiana Fruit Extract, Salix Nigra (Willow) Bark Extract, Leuconostoc/​Radish Root Ferment Filtrate, Saccharum Officinarum (Sugarcane) Extract, Sodium Hyaluronate, Populus Tremuloides Bark Extract, Gluconolactone, Citrus Aurantium Dulcis (Orange) Fruit Extract, Citrus Limon (Lemon) Fruit Extract, Acer Saccharum (Sugar Maple) Extract, Sodium Phytate",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50016916",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 5,
+        "brand": null,
+        "name": "Herbivore Bakuchiol Retinol Alternative Serum",
+        "description": "Visibly improve the look of fine lines and wrinkles and firm the skin with the Herbivore Moon Fruit Serum. A great alternative to retinol, this jelly-textured serum is enriched with 1% Bakuchiol that provides wrinkle-smoothing benefits, minus the dryness, redness and irritation. Plant-based peptides and schisandra berry also help to firm the look of skin and belongs in your skincare routine.",
+        "price": "54.00",
+        "rating": "4.7",
+        "image_url": null,
+        "image": "backuchiol.webp",
+        "size": "40ml",
+        "ingredients_list": "Aqua/​Water/​Eau, Triheptanoin, Propanediol, C9-12 Alkane, Simmondsia Chinensis(Jojoba) Seed Oil, Cetearyl Olivate, Sorbitan Olivate, Glycerin, Melia Azadirachta Flower Extract, Bakuchiol, Schisandra Chinensis Fruit Extract, Hydrolyzed Eragrostis Tef Seed Extract, Anigozanthos Flavidus Flower/​Leaf Extract, Ficus Carica (Fig) Fruit Extract, Punica Granatum Fruit Extract, Morus Alba Fruit Extract, Ginkgo Biloba Nut Extract, Sodium Stearoyl Glutamate, Coccinia Indica Fruit Extract, Caprylyl/​Capryl Glucoside, Sclerotium Gum, Sodium Levulinate, Sodium Anisate, Citric Acid, Coco-Caprylate/​Caprate, Decyl Glucoside, Sodium Phytate, Tocopheryl Acetate, Lauryl Glucoside, Vaccinium Angustifolium (Blueberry) Fruit Extract, Diisopropyl Adipate, Triethyl Citrate, Caprylic/​Capric Triglyceride, Vanilla Planifolia Fruit Extract, Rosa Damascena Extract, Alcohol, Citrus Aurantium Dulcis(Orange) Peel Extract, Rubus Idaeus (Raspberry) Fruit Extract, Pyrus Malus (Apple) Fruit Extract, Musa Sapientum (Banana) Fruit Extract, Citrus Aurantium Amara (Bitter Orange) Leaf/​Twig Extract, Cinnamomum Camphora Linalooliferum Wood Extract",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50016917",
+    "fields": {
+        "product_type": 4,
+        "skin_type": 5,
+        "brand": null,
+        "name": "Xi-Xi Vitamin C Serum",
+        "description": "This radiance-reviving oil blends argan, sea buckthorn and grape-seed oils to nourish and moisturise dry skin.\r\nFresh, energising aroma courtesy of natural orange peel.",
+        "price": "24.99",
+        "rating": "3.8",
+        "image_url": null,
+        "image": "xi-xi-small.webp",
+        "size": "50ml",
+        "ingredients_list": "Aqua, Glycerin, Butylene Glycol, Phenoxyethanol, Hydroxyethylcellulose, Ethyl Ascorbic Acid, DMDM Hydantoin, Tetrasodium EDTA, Perfume, Allantoin, Niacinamide, Sodium Acetate, PPG-26-Buteth-26, PEG-40 Hydrogenated Castor Oil, Isopropyl Alcohol, Cellulose",
+        "user_wishlist": []
+    }
+}, {
+    "model": "products.product",
+    "pk": "50016918",
+    "fields": {
+        "product_type": 1,
+        "skin_type": 2,
+        "brand": null,
+        "name": "The Cleanser by Curology",
+        "description": "Curology’s cleanser and moisturizer are designed to work well for all skin types, including oily! The cleanser helps maintain your skin’s natural moisture barrier, and the moisturizer locks in moisture while keeping your skin’s hydration levels balanced over time. They’re also great for sensitive, acne-prone skin, because they’re formulated with non-comedogenic ingredients and free of parabens, sulfates, fragrances, dyes, or other common irritating ingredients.",
+        "price": "17.00",
+        "rating": "2.8",
+        "image_url": null,
+        "image": "curology-cleanser.webp",
+        "size": null,
+        "ingredients_list": "Water, Acrylates Copolymer, Cocamidopropyl Hydroxysultaine, Sodium Cocoyl Isethionate, Xylitylglucoside, Propanediol, Coco-Glucoside, Anhydroxylitol, Stearic Acid, 1,2-Hexanediol, Xylitol, Panthenol, Coconut Alcohol, Citric Acid, PEG-150 Pentaerythrityl Tetrastearate, Stearyl Alcohol, Glycerin, Sodium Hydroxide, Sodium Chloride, Caprylhydroxamic Acid, Disodium EDTA, Xanthan Gum, Potassium Sorbate, Avena Sativa (Oat) Leaf Extract",
+        "user_wishlist": []
+    }
+}]
