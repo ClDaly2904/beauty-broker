@@ -26,7 +26,12 @@ def newsletter(request):
 
     template = 'home/newsletter.html'
 
-    context = {
-    }
+    return render(request, template)
 
-    return render(request, template, context)
+
+def advice(request):
+    """ A view to return the advice page """
+
+    template = 'home/advice.html'
+
+    return render(request, template)
