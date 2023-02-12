@@ -162,6 +162,35 @@ a:hover {
     overflow-y: auto;
 }
 
+.no-image {
+    background: url('/media/noimage.png') no-repeat bottom 20% center;
+    background-size: cover;    
+}
+
+.no-image-pd {
+    height: 20rem;
+    width: 20rem;
+    background: url('/media/noimage.png') no-repeat bottom 20% center;
+    background-size: cover;
+}
+
+.no-image-profile {
+    height: 5rem;
+    width: 5rem;
+    background: url('/media/noimage.png') no-repeat bottom 20% center;
+    background-size: cover;
+}
+
+.the-ordinary-bp {
+    background: url('/media/to-portrait-products.webp') no-repeat bottom 20% center;
+    background-size: cover;   
+}
+
+.glossier-bp {
+    background: url('/media/glossier-portrait-img.webp') no-repeat bottom 20% center;
+    background-size: cover;   
+}
+
 .wishlist {
     color: #192524;
 }

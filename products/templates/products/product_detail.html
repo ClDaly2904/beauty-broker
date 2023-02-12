@@ -13,17 +13,14 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-md-5">
-            <div class="image-container my-5">
-                {% if product.image %}
-                <a href="{{ product.image.url }}" target="_blank">
+            {% if product.image %}
+                <div class="image-container my-5">
                     <img class="card-img img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
+                </div>
                 {% else %}
-                <a href="">
-                    <img class="card-img img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                </a>
+                <div class="no-image-pd image-container my-5">
+                </div>
                 {% endif %}
-            </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 px-4">
             <div class="product-details-container mb-5 mt-md-5">
@@ -100,8 +97,10 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" class="my-3 mx-auto atb-btn" value="Add to Bag">
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <div class="p-2 mx-auto">
+                            <input type="submit" class="my-3 mx-auto atb-btn" value="Add to Bag">
+                        </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
                 <hr>
