@@ -1,0 +1,1 @@
+web: gunicorn beauty_broker.wsgi:application
