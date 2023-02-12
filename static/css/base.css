@@ -203,6 +203,12 @@ a:hover {
     height: 20rem;
 }
 
+.advice-img {
+    height: 25rem;
+    background: url('/media/skincare-products.webp') no-repeat bottom 15% center;
+    background-size: cover;       
+}
+
 .wishlist {
     color: #192524;
 }
