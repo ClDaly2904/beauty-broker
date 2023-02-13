@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://beauty-broker.herokuapp.com/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/bag/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?product_type=cleansers</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?product_type=toners</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?product_type=serums</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?product_type=moisturisers</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?product_type=masks</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?product_type=sunscreens</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?skin_type=dry_skin</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?skin_type=oily_skin</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?skin_type=combination_skin</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?skin_type=blemish_prone_skin</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/?skin_type=mature_skin</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/brand_page/1/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/brand_page/2/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/newsletter/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/advice/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169129/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016913/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169132/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016919/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016920/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50001692129/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016923/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169341/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016938/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169384/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016939/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016943/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169432/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169463/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016954/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016965/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169705/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50001697584/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169768/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50001698035/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50001698123/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169832/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50001698345/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016989/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50001699/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/500016993/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000169975/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50001967/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50001968/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000198398/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50016914/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50016915/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50016916/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50016917/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/50016918/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://beauty-broker.herokuapp.com/products/5000159205/</loc>
+  <lastmod>2023-02-13T16:02:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
