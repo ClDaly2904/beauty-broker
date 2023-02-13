@@ -192,7 +192,8 @@ a:hover {
 }
 
 .news-img {
-    height: 25rem;
+    min-height: 25rem;
+    max-height: fit-content;
     background: url('/media/newsletter-image.webp') no-repeat center;
     background-size: cover;    
 }
@@ -492,5 +493,9 @@ CC 2.0 License Iatek LLC 2018
 @media (max-width: 393px) {
     .mobile-logo {
         display: none!important;
+    }
+
+    .dropdown-logo {
+        display: block!important;
     }
 }
