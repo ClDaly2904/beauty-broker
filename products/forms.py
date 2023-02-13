@@ -2,6 +2,8 @@ from django import forms
 from .models import Product, Product_Category, Skin_Concern, Brand
 from .widgets import CustomClearableFileInput
 
+from django.core.validators import MinValueValidator
+
 
 class ProductForm(forms.ModelForm):
     """ Create instance of Product Form """
@@ -12,6 +14,12 @@ class ProductForm(forms.ModelForm):
 
     image = (forms.ImageField(label='Image', required=False,
              widget=CustomClearableFileInput))
+
+    line_number = forms.IntegerField(
+        required=True,
+        widget=forms.NumberInput(),
+        validators=[MinValueValidator(0)]
+    )
 
     # override init method
     def __init__(self, *args, **kwargs):

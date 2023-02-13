@@ -113,6 +113,7 @@ def add_product(request):
         else:
             messages.error(request, 'Failed to add product. Please ensure\n'
                                     'the information provided is valid.')
+            return render(request, 'products/add_product.html', {'form': form})
     else:
         form = ProductForm()
     template = 'products/add_product.html'

@@ -46,7 +46,8 @@ class Product(models.Model):
     brand = models.ForeignKey('Brand', null=True, blank=True,
                               on_delete=models.SET_NULL)
     line_number = models.CharField(null=False, blank=False,
-                                   primary_key=True, max_length=20)
+                                   primary_key=True,
+                                   max_length=20)
     name = models.CharField(max_length=100)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2,
