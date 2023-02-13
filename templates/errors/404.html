@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <main>
+        <div class="flex-wrapper error-pg">
+
+            <div class="container-fluid py-5 my-5">
+                <h1 class="display-5 logo-font">Ooops!</h1>
+                <p class="col-md-8 fs-4">The page you're looking for isn't available.</p>
+            </div>
+            <p class="mt-3 ml-3 mb-5">Please click the button below to browse our sumptious selection of skincare...</p>
+            <a href="{% url 'products' %}" class="btn ks-button ml-3">
+                <i class="fas fa-chevron-left"></i>
+                <p>Keep shopping</p>
+            </a>
+
+        </div>
+    </main>
+
+    {% endblock %}

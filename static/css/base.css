@@ -288,6 +288,12 @@ a:hover {
     height: 4px;
 }
 
+/*------------------------------- 404 Page */
+
+.error-pg {
+    background: url('/media/to-background-med.webp') no-repeat center;
+    background-size: cover;
+}
 
 /* ------------------------------- AllAuth Formatting */
 
