@@ -56,8 +56,6 @@ A link to the live site can be found [here](https://beauty-broker.herokuapp.com/
 
 Before beginning to code the Beauty Broker website, I took some time to reflect on what it was that users would expect from a skincare website. I used GitHub's Projects feature to create a User Stories board to list all of the user goals I had come up with, and the epics that the vast majority of these would fall under.
 
-Before writing any of the actual code for the Beauty Broker website, I took some time to evalaute what users would typically expect from a restaurant website. I used GitHub's Project's feature to create a User Stories board that I updated as I went along to keep track of the User Goals that I had decided upon.
-
 ![Screenshot of user stories board](images/user-stories-1.png)
 ![Screenshot of user stories board](images/user-stories-2.png)
 
@@ -172,7 +170,8 @@ I added the wishlist functionality, brand focus and skin secrets pages. The feat
 
 <details><summary>Iteration 5</summary>
 
-![Iteration 4](images/iteration5.png)
+![Iteration 5](images/iteration5.png)
+![End Kanban](images/end-kanban.png)
 
 </details>
 
@@ -218,3 +217,428 @@ I added the wishlist functionality, brand focus and skin secrets pages. The feat
 15. When I go in to my account section, I can see the order I have just created and the delivery information that I asked to save.
 
 Whilst planning the functionality for the Beauty Broker website, I had to consider how I was going to achieve both the aims for the user and the restaurant. This led to the creation of the features found in the Features section.
+
+### Colour Scheme and Fonts
+
+It is a strong belief within the beauty community that skincare is selfcare! With this in mind, I wanted to create a website that felt calming and luxurious for users. I used [Webflow's Top 10 Google Fonts for your webpage](https://webflow.com/blog/google-fonts) to help me choose a font combination that allowed me to create a brand feeling through my fonts that was also easy to read and accessible for users.
+I browsed a range of colourschemes from [Jordan Prindle Designs](https://www.jordanprindledesigns.com/blog/color-palettes) and felt that the 'Enchanted Colour Palette' had the desired feel I wanted for the Beauty Broker website.
+
+### Wireframes
+
+Before building my site in Gitpod, I took all of the features I thought to be in scope and combined these with my design ideas to create wireframes in Lucidchart. This helped me to implement a consistent design across the Beauty Broker website to enhance a cohesive feel.
+
+- [Home wireframe](wireframes/home-page.pdf)
+- [Product Page](wireframes/product-page.pdf)
+- [Product Detail](wireframes/product-detail-page.pdf)
+- [Bag wireframe](wireframes/bag-page.pdf)
+- [Checkout](wireframes/checkout-page.pdf)
+- [Checkout Success wireframe](wireframes/checkout-success.pdf)
+- [User Profile wireframe](wireframes/user-profile.pdf)
+- [Newsletter](wireframes/newsletter.pdf)
+- [Brand Page](wireframes/brand-page.pdf)
+
+### Entity Relationship Diagram
+As Python is an object-orientated programming language, I took some time to consider what objects would be involved in an ecommerce store, how they would related to each other, and what attributes those objects would have.
+
+![Entity relationship diagram](images/entity-relationship.png)
+
+## Features
+
+### Navigation bar
+The striking navbar can be found at the top of the Beauty Broker page and is fully responsive, with three designs based on screen size. Originally, the 'Beauty Broker.' logo text was not present on small and medium sized navbars, but during the user testing stage, feedback was that this meant that users weren't really sure what the name of the website was! Therefore I altered the navbar so that it always had the Beauty Broker logo in some format, without compromising on functionality.
+
+The options available on the navigation bar differ depending on if a user is logged in, and which level of user is logged in. A logged out user will only have the drop down 'register' and 'login' under the 'My Account' section. A normal user that is logged in will be able to access the 'log out' page as well as a link to their own 'my account' page to show their order history, saved delivery information and any wishlist items. A store owner or super user has these in addition to the 'Product Management' option under the 'My Account' tab, where they can add a new product.
+<details><summary>Full size nav</summary>
+
+![Full size nav](images/features/full-width-nav.png)
+
+</details>
+
+<details><summary>Med screen sizes nav</summary>
+
+![Med nav](images/features/med-nav.png)
+
+</details>
+
+<details><summary>XS screens nav</summary>
+
+![Xs screens nav](images/features/xs-nav.png)
+
+</details>
+
+<br>
+
+### Footer
+The footer of the website is simple but contains key information. There is a link that takes users to an external page where they can view the privacy policy, a link to the Facebook page and the newsletter signup page.
+
+<details><summary>Footer</summary>
+
+![Footer](images/features/footer.png)
+
+</details>
+
+### Home Page
+The Beauty Broker homepage contains an overview of the sites different features, to clearly present the purpose of the site to users.
+
+Right at the top of the home page is a link and call to action button that demonstrates the primary purpose of the site is to sell high quality skincare products. Underneath, there are links to the brand sections, newsletter signups and the skincare secrets pages. The homepage gives to give the user a concise look at the different sections of the site they can explore, along with being prime real estate for key words to denote the sites purpose.
+
+<details><summary>Home Page</summary>
+
+![Home Page](images/features/home-page-screenshot.png)
+
+</details>
+
+<br>
+
+### Product Pages, Sorting and Searching
+Users can list a page of products that displays key information about products - name, price and, if applicable rating/size. The product image is also displayed to keep the site eye catching for the user and allow them to select products at a glance.
+
+To better aid users in selecting the products right for them, products can be sorted and categorised in several ways. Firstly, the all product option lists all available products on the site, with the option to sort them by price, rating or alphabetically. Further to this, users can choose to shop by either the product category (e.g. moisturisers), or by skin concern category (i.e. oily skin). Sorting is also available within these categories. For example, a user could very easily find the highest rated sunscreen!
+
+This adds value to the user by saving them time if they know what they want, but also offering product selections to users that are unsure what skincare item would be good for their skin.
+
+<details><summary>Products category page</summary>
+
+![Product Category](images/features/category-screenshot.png)
+
+</details>
+
+<details><summary>Search a product</summary>
+
+![Product Search](images/features/search-functionality.png)
+
+</details>
+
+<br>
+
+### Product Detail Pages
+The product detail page contains all information the user would need to make an informed decision about their product purchase. It includes the name, description, price, ingredients and, if applicable, a rating or size.
+
+The ingredients section was a later, but crucial addition to this page. Whilst creating this project, a family member had a bad reaction to the face cream that they were using. They didn't understand what was in it that had caused this reaction (which later transpired to be related an essential oil within the product). This showcased the importance of showing ingredients and inspired me to add a link to the [Paula's Choice Skincare Dictionary](https://www.paulaschoice.com/ingredient-dictionary) in this section to help users be better informed about the ingredients in their skincare.
+
+This page is also where users can add the item to their bag, or their wishlist. If adding to bag, the quantity buttons allow the adjustment of the desired quantity of product to be added to the bag.
+
+Store owners can use this page to edit or delete the selected product. It is important to note that I added a secondary confirmation page before product deletion to help minimise the risk of store owners deleting products accidentally (the edit/delete buttons are not visible if a lower level of user is logged in).
+
+
+<details><summary>Product Detail Page</summary>
+
+![Product Detail Page](images/features/product-detail-page.png)
+
+</details>
+
+<br>
+
+
+### User Registration and Accounts
+Accounts are a fundamental part of this e-commerce site. Logging in and registering for an account is made easy through the use of Django all-auth, with minimal stages that the user has to go through. Although a user can make a purchase without creating an account (so as not to deter potential buyers that do not want to go through the process), creating an account present many benefits to the user.
+
+Firstly, logged in users can save delivery information to their account to speed up the checkout process. The 'My Account' section available to authenticated users can hold a record of this information, along with access to their past orders. A summary of past orders is shown, and users can click into these to view the order in more detail (with the page header and toast confirming to them this is a PAST order).
+
+Logging in also gives users the opportunity to create a 'Wishlist'. This is a great addition to a skincare retail site as often skincare lovers need to finish up their products before purchasing new ones, but are always on the hunt for the next product to try! The wishlist functionality lets registered users create a list of products they have their eye on, and encourages them to return to the site to purchase them.
+
+<details><summary>Accounts</summary>
+
+![My Account](images/features/my-account.png)
+
+</details>
+
+<br>
+
+
+### Product Management
+If a user is logged in as a store owner/superuser, they have the ability to add, update and delete the products available on their website without having to login to the back end admin panel. These pages can only be accessed by users with the right level of authorisation. The form to add a product can be found under 'My Account', then 'Product Management', whilst editing and deleting a product can be done via the relevant product detail page.
+
+<details><summary>Product Management</summary>
+
+![My Bookings](images/features/product-management.png)
+
+</details>
+
+<br>
+
+### Bag
+Prior to going to the checkout, selected items are held in the user's shopping bag. Upon adding to bag, a success toast appears and provides a summary of all the items in the users bag.
+
+Once navigated to, the bag shows the user the details of all the items in their bag and gives them an opportunity to update the quantity or remove the item.
+
+<details><summary>My Bag</summary>
+
+![My Bag](images/features/bag-page.png)
+
+</details>
+
+<br>
+
+### Checkout
+The checkout operation is in two stages. Firstly, the user fills in the checkout form with their personal, delivery and payment information. The bag summary is displayed for the user so they can see what they are about to purchase. The validated form shows users which fields are required and gives feedback on any input errors.
+
+There is a short loading screen where the payment is process with Stripe. If the payment is processed correcty, a checkout success page appears with an order confirmation page to confirm to the user their order has been placed, with a summary of all the details. A confirmation email is sent to email in the checkout form, and the order confirmation can be founnd again in the My Account section if the user is authenticated.
+
+In case the browser crashes, webhooks are sent in conjunction with Stripe so that the payment can be tracked and the order still procesed, helping to build consumer confidence.
+
+<details><summary>Checkout Form</summary>
+
+![Checkout Form](images/features/checkout-page.png)
+
+</details>
+<details><summary>Checkout Success</summary>
+
+![Checkout Success](images/features/order-confirmation-page.png)
+
+</details>
+
+<br>
+
+### Newsletter
+The newsletter page is a form of web marketing. It consists of a simple form generated with MailChimp, where users can subscribe to the Beauty Broker emails for access to the latest skincare products and exclusive offers.
+
+Along with access from the main header, users are encouraged to access this page and sign up with the form from the homepage and a link in the footer.
+
+<details><summary>Newsletter</summary>
+
+![Newsletter](images/features/newsletter-page.png)
+
+</details>
+
+<br>
+
+### Brand Pages
+Beauty Broker highlights two popular skincare brands- The Ordinary (a favourite of the skincare community), and Glossier. These pages serve to highlight the brands and educate users as to what sets them apart in the beauty world. They are both brands that are very popular in the skincare scene at present, so by highlighting these I hope to attract more users to the site.
+
+The pages detail brand information such as their tagline, ethos and link back to products available to purchase on the website, encouraging users to buy!
+<details><summary>Brand Pages</summary>
+
+![Brand Pages](images/features/brand-feature.png)
+
+</details>
+
+<br>
+
+### Skincare Secrets
+As mentioned earlier, this was originally a feature not meant for this sprint of the website. However, whilst carrying out user testing, I found that many of my guinea pigs (friends and family) were unsure what a lot of the products actually were. It soon became apparent that a user with little understanding of skincare was very unlikely to actually see any reason to make a purchase in the real world.
+
+I created the Beauty Broker website with the aim of making high quality skincare products accessible to not just people that were already interested in skincare, but anyone who wanted help with their skin. I felt that it was necessary to create this page to give users a basic understanding of a beauty routine and provide links to high-quality resources where they could continue their research. The videos chosen to include actually include some of the products available to purchase on the website, so provide another source of marketing/upselling.
+
+This page also helps give credibility to the site and assure users that it is a high quality website, worthy of their trust (and their money)!
+
+<details><summary>Skincare Secrets</summary>
+
+![Skincare Secrets](images/features/skincare-secrets.png)
+
+</details>
+
+<br>
+
+### Form Validation
+
+E-commerce websites can pose a big risk when it comes to improperly entered data, for example causing payments to fail. As the website features various forms from login, checkout and product admin, I had to employ the use of both front-end and back-end form validation to try and minimise this risk. I used a mix of Bootstrap form control, Django model fields and form validators/widgets to create forms that rejected invalid data and fedback to the user what was wrong to minimise frustration.
+
+<details><summary>Form Validation (Front)</summary>
+
+![Form Validation](images/features/front-end-form-validation.png)
+
+</details>
+<details><summary>Form Validation (Back)</summary>
+
+![Form Validation](images/features/back-end-form-validation.png)
+
+</details>
+
+<br>
+
+### Toasts
+
+To instill user confidence and heighten user experience on the Beauty Broker site, I employed the use of Django's messaging service. Toasts are present across the site for almost every user action to keep the user up to date and confirm their actions have been completed accordingly.
+
+<details><summary>Success Toasts</summary>
+
+![Success Toasts](images/features/success-toasts.png)
+
+</details>
+<details><summary>Error Toasts</summary>
+
+![Error Toasts](images/features/error-toasts.png)
+
+</details>
+
+<br>
+
+## Technologies Used
+
+<details>
+<summary>Eyedropper Tool (Chrome Extension)</summary>
+<br>
+ - This tool allows me pick any colour from the web page I am and gives me the name (if applicable), hex, hsl and rgb values. I used this to make sure I was using the exact theme colours throughout the site
+</details>
+<details>
+<summary>WebAIM</summary>
+<br>
+- Contrast Checker - checks the contrast of colours input against the Web Content Accessibility Guidelines. I input my background and foreground/text colours to ensure they meet the WCAG AA/AAA standards
+- WAVE - WAVE can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors
+</details>
+<details>
+<summary>Fontawesome</summary>
+<br>
+- The social media icons on the footer are taken from FontAwesome
+</details>
+<details>
+<summary>Google Fonts</summary>
+<br>
+- Both my title and body fonts are imported from Google Fonts
+</details>
+<details>
+<summary>W3C Markup Validation Service</summary>
+<br>
+- I used the HTML validator to run both my html pages and ensure there were no errors
+- I used the Jigsaw CSS validator to ensure that my CSS file did not contain any errors
+</details>
+<details>
+<summary>Lighthouse (Chrome DevTools)</summary>
+<br>
+- An open-source, automated tool for improving the quality of web pages. I used it to audit performance, accessibility, SEO and best practices
+</details>
+<details>
+<summary>GitHub</summary>
+<br>
+-  To host my repository
+- To create user stories
+- To take an Agile approach by usign the project board to make iterations
+</details>
+<details>
+<summary>GitPod</summary>
+<br>
+- An open-source developer platform used to write my code (using VS Code)
+</details>
+<details>
+<summary>Visual Code Studio (VS Code)</summary>
+<br>
+- Visual Studio Code is a streamlined code editor with support for development operations like debugging, task running, and version control
+- I used several VS Code extensions to help make my work more efficient such as:
+    - Auto Close Tag (automatically adds HTML/XML closing tags)
+    - Auto Open Preview Page (opens a preview panel when markdown or asciidoc file is opened)
+</details>
+<details>
+<summary>Heroku</summary>
+<br>
+- To host my live site
+</details>
+<details>
+<summary>Bootstrap</summary>
+<br>
+- Bootstrap CSS framework helped me to create a responsive and visually stunning site without having to spend too much time writing CSS
+</details>
+<details>
+<summary>Django</summary>
+<br>
+- Django is a Python web framework that encourages rapid development. I used the Django framework, in particular the administration site to help manage my models and objects
+- Django allauth is an integrated set of Django applications dealing with account authentication, registration, management that I used for my user accounts
+</details>
+<br>
+<details>
+<summary>Elephant SQL</summary>
+<br>
+- PostgreSQL as a service to host my database
+</details>
+<br>
+<details>
+<summary>Stripe</summary>
+<br>
+- For processing payments and webhooks
+</details>
+<br>
+<details>
+<summary>AWS</summary>
+<br>
+- To store my static files and media
+</details>
+<br>
+<details>
+<summary>MailChimp</summary>
+<br>
+- To create a newsletter signup form
+</details>
+<br>
+<details>
+<summary>LucidChart</summary>
+<br>
+- To create my entity relationship diagram and brainstorm SEO keywords
+</details>
+<br>
+
+
+<details>
+<summary>Django</summary>
+<br>
+- Django is a Python web framework that encourages rapid development. I used the Django framework, in particular the administration site to help manage my models and objects
+- Django allauth is an integrated set of Django applications dealing with account authentication, registration, management that I used for my user accounts
+</details>
+<br>
+
+
+## Testing 
+Testing notes for the Beauty Broker project are contained in a separate [TESTING.md](TESTING.md) file.
+
+## Deployment
+The live site for Beauty Broker is hosted on Heroku, a platform that enables developers to build, run, and operate applications entirely in the cloud. To deploy the live site on Heroku, I wrote my code in GitPod then pushed the code to GitHub. Heroku uses the code in the GitHub repository to build the live site.
+
+To deploy the live site on Heroku:
+1. Create a Heroku account and log in
+2. Select to create a new app in Heroku. Give it a unique name and create new app
+3. Once the new app is created, we need to set up a few things.
+4. Under the 'Settings' tab, go to 'Add Buildpack button and click to add a buildpack. Select python. This helps Heroku understand it needs to build a Python app.
+5. This project uses Heroku Postgres for the database, so next we need to add that. Go to the 'Resources' tab and search for Heroku Postgres in the Add-ons box.
+6. Go back to the 'Settings' tab and click on 'Reveal Config-Vars'. Copy the 'DATABASE_URL' config var.
+7. In GitPod, create an env.py file and create a new DATABASE_URL variable using the value copied from Heroku.
+8. Back in Heroku, on the 'Settings' tab, add in the config-vars such as the SECRET_KEY
+9. The settings.py file in Gitpod will need to be updated with the information for the new SECRET_KEY and DATABASE
+10. Set up the html templates by adding a TEMPLATES_DIR variable with 'os.path.join(BASE_DIR, 'templates')'. Under TEMPLATES, update DIRS with the new variable
+11. To make sure the app can be run on the local development server and in Heroku, we need to update the ALLOWED HOSTS key in the settings.py file, it should be updated to include 'localhost' and your Heroku app url (https://'YOUR APP NAME'.herokuapp.com/)
+12. In the base directory on GitPod, create a Procfile and add 'web: gunicorn Your App Name.wsgi`'. This tells Heroku to create/run a web application.
+13. In Heroku, click on the 'Deploy' tab. Select GitHub in the 'Deployment Method' section. You can search for your repository and select it to connect the repo to Heroku. Heroku gives the option to either deploy the latest GitHub code automatically with automatic deploys or to manually deploy a selected branch.
+
+Full details for deploying to Heroku using Git can be found [here](https://devcenter.heroku.com/articles/git).
+
+## Credits
+
+### Inspiration
+
+The Beauty Broker website through following the [Code Institute](https://codeinstitute.net/) Boutique Ado Walkthrough. I have customised this to meet the needs of Beauty Broker, but most of the functionality for products, sorting, bag and checkout came from this walkthrough.
+
+### Other
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/) to generate the privacy policy
+- [MailChimp](https://mailchimp.com/en-gb/) to generate the newsletter signup form
+- [XML sitemaps](https://www.xml-sitemaps.com/) to create my sitemaps.xml file
+- [Paula's Choice Skincare Dictionary](https://www.paulaschoice.com/ingredient-dictionary) in the ingredients section in the product detail page
+- Helping create my [Entity Relationship Diagram](https://www.edrawmax.com/templates/1008537/)
+- [LucidChart](https://www.lucidchart.com/pages) to create my entity relationship diagram and brainstorm SEO keywords
+- Implementing widgets for form inputs [Django Project](https://docs.djangoproject.com/en/4.1/ref/forms/widgets/)
+- [Webflow's Top 10 Google Fonts for your webpage](https://webflow.com/blog/google-fonts) to help choose the Google Fonts
+- [Jordan Prindle's Designs](https://www.jordanprindledesigns.com/blog/color-palettes) to choose the colour scheme
+- [Pexels](https://www.pexels.com/), [Pixabay](https://pixabay.com/), and [Unsplash](https://unsplash.com/) for all of the product images
+- [LookFantastic](https://www.lookfantastic.com/), [CultBeauty](https://www.cultbeauty.co.uk/) and [BeautyBay](https://www.beautybay.com/) for product descriptions
+- [Youtube](https://www.youtube.com/) for the video inserts on the skincare secrets page
+- [Incide Coder](https://incidecoder.com/) for the product ingredients
+- [Very Academy](https://morioh.com/p/de793cc422b5) for help creating the wishlist functionaity
+- [Article on custom Bootstrap Carousel](https://medium.com/wdstack/bootstrap-4-custom-carousel-94a537364fde) for the brand pages carousel, the code for which found [here](https://www.codeply.com/go/s3I9ivCBYH/bootstrap-4-responsive-carousel-one-at-a-time)
+- [Health Essentials](https://health.clevelandclinic.org/skin-care-ingredients-explained/) as a skincare secrets link
+- [Cosmopolitan Article](https://www.cosmopolitan.com/style-beauty/beauty/a25372431/what-order-to-apply-skincare-products/) as a skincare secrets link
+- [Allure Article](https://www.allure.com/story/skin-care-ingredients-should-not-mix) as a skincare secrets link
+- [The Ordinary's website](https://theordinary.com/en-gb/regimen-builder.html?gclid=CjwKCAiAuaKfBhBtEiwAht6H75qucLChRF1QGVBlfqBo4IXRnCr1_CDIc_01gXVmjgxkJ5egyqieIRoCvdoQAvD_BwE&gclsrc=aw.ds) as a skincare secrets link
+- [Tiny PNG](https://tinypng.com/) to compress images
+- [Convertio](https://convertio.co/) to convert jpeg files to webps
+
+- [PEAKD](https://beta.peakd.com/hive-163521/@leoumesh/looping-through-carousel-in-django-python) article to help solve bug in carousel in brand product pages
+- [This Stack Overflow Answer](https://stackoverflow.com/questions/34885752/django-template-remove-underscore-and-capitalize-each-word) for helping solve an issue with category header underscores
+- [Apps Love World](https://www.appsloveworld.com/django/100/94/django-template-remove-underscore-and-capitalize-each-word) for another part of the category header issue
+
+
+- [Django documentation](https://docs.djangoproject.com/en/4.1/)
+- [Python3 documentation](https://docs.python.org/3/)
+- [W3 Schools](https://www.w3schools.com/python/)
+- As always, [Stack Overflow](https://stackoverflow.com/questions/36432954/ was a great resource for troubleshooting
+
+### Acknowledgements
+- My mentor, Precious Ijege for his constructive feedback
+- My friends and family for testing out my live site and providing valuable user input
+- Code Institute tutors for helping me troubleshoot
