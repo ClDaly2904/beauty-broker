@@ -1,0 +1,4 @@
+Useragent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://beauty-broker.herokuapp.com/sitemap.xml
