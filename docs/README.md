@@ -4,7 +4,7 @@
 
 ## Contents
 - [About](#about)
-- [Web Marketing](#web-marketing)
+- [Web Marketing](#web-marketing-and-search-engine-optimisation)
 - [User Experience](#user-experience)
     - [Target audiences](#target-audiences)
     - [User Stories](#user-stories)
@@ -48,9 +48,28 @@ Our users are anyone interested in skincare or wanting to see improvements in th
 Facebook is a platform that would be great for continuing the education of our users through blog posts, videos and flash sale advertisements. Marketing on Instagram and TikTok would also be great for sale advertising (younger users may be more in need of a sale) along with demonstrating the latest skincare trends.
 
 [Link to Facebook Marketing Page](https://www.facebook.com/people/Beauty-Broker/100090515160784/)
+
+<details><summary>Facebook Business Page</summary>
+
 ![Facebook Screenshot whole](images/fb-page-whole.png)
+
+</details>
+
+<br>
+<details><summary>Facebook Screenshot 1</summary>
+
 ![Facebook Screenshot 1](images/fb-page1.png)
+
+</details>
+
+<br>
+<details><summary>Facebook Screenshot 2</summary>
+
 ![Facebook Screenshot 2](images/fb-page2.png)
+
+</details>
+
+<br>
 
 Beauty Broker also employs the use of MailChimp to perform email marketing. Users can subscribe the the Beauty Broker emails to receive information about the latest product releases, any sales and to gain access to further skincare advice.
 
@@ -598,22 +617,70 @@ Testing notes for the Beauty Broker project are contained in a separate [TESTING
 ## Deployment
 The live site for Beauty Broker is hosted on Heroku, a platform that enables developers to build, run, and operate applications entirely in the cloud. To deploy the live site on Heroku, I wrote my code in GitPod then pushed the code to GitHub. Heroku uses the code in the GitHub repository to build the live site.
 
-To deploy the live site on Heroku:
-1. Create a Heroku account and log in
-2. Select to create a new app in Heroku. Give it a unique name and create new app
-3. Once the new app is created, we need to set up a few things.
-4. Under the 'Settings' tab, go to 'Add Buildpack button and click to add a buildpack. Select python. This helps Heroku understand it needs to build a Python app.
-5. This project uses Heroku Postgres for the database, so next we need to add that. Go to the 'Resources' tab and search for Heroku Postgres in the Add-ons box.
-6. Go back to the 'Settings' tab and click on 'Reveal Config-Vars'. Copy the 'DATABASE_URL' config var.
-7. In GitPod, create an env.py file and create a new DATABASE_URL variable using the value copied from Heroku.
-8. Back in Heroku, on the 'Settings' tab, add in the config-vars such as the SECRET_KEY
-9. The settings.py file in Gitpod will need to be updated with the information for the new SECRET_KEY and DATABASE
-10. Set up the html templates by adding a TEMPLATES_DIR variable with 'os.path.join(BASE_DIR, 'templates')'. Under TEMPLATES, update DIRS with the new variable
-11. To make sure the app can be run on the local development server and in Heroku, we need to update the ALLOWED HOSTS key in the settings.py file, it should be updated to include 'localhost' and your Heroku app url (https://'YOUR APP NAME'.herokuapp.com/)
-12. In the base directory on GitPod, create a Procfile and add 'web: gunicorn Your App Name.wsgi`'. This tells Heroku to create/run a web application.
-13. In Heroku, click on the 'Deploy' tab. Select GitHub in the 'Deployment Method' section. You can search for your repository and select it to connect the repo to Heroku. Heroku gives the option to either deploy the latest GitHub code automatically with automatic deploys or to manually deploy a selected branch.
-
 Full details for deploying to Heroku using Git can be found [here](https://devcenter.heroku.com/articles/git).
+
+<details>
+<summary>Heroku Deployment instructions</summary>
+<br>
+To deploy the live site on Heroku:<br>
+1. Create a Heroku account and log in<br>
+2. Select to create a new app in Heroku. Give it a unique name and create new app<br>
+3. Once the new app is created, we need to set up a few things.<br>
+4. Under the 'Settings' tab, go to 'Add Buildpack button and click to add a buildpack. Select python. This helps Heroku understand it needs to build a Python app.<br>
+5. This project uses Elephant PosgreSQL- Please follow the Elephant SQL Instructions underneath then return to Heroku Deployment<br>
+6. Back in Heroku, on the 'Settings' tab, add in the config-vars such as the SECRET_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DATABASE_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET, USE_AWS<br>
+7. The settings.py file in Gitpod will need to be updated with the information for the new SECRET_KEY and DATABASE<br>
+8. Set up the html templates by adding a TEMPLATES_DIR variable with 'os.path.join(BASE_DIR, 'templates')'. Under TEMPLATES, update DIRS with the new variable<br>
+9. To make sure the app can be run on the local development server and in Heroku, we need to update the ALLOWED HOSTS key in the settings.py file, it should be updated to include 'localhost' and your Heroku app url (https://'YOUR APP NAME'.herokuapp.com/)<br>
+10. In the base directory on GitPod, create a Procfile and add 'web: gunicorn Your App Name.wsgi`'. This tells Heroku to create/run a web application.<br>
+11. In Heroku, click on the 'Deploy' tab. Select GitHub in the 'Deployment Method' section. You can search for your repository and select it to connect the repo to Heroku. Heroku gives the option to either deploy the latest GitHub code automatically with automatic deploys or to manually deploy a selected branch.<br>
+</details>
+<details>
+<summary>Elephant PostgreSQL as a service instructions</summary>
+<br>
+1. Log in or sign up to ElephantSQL.<br>
+2. Press create new instance.<br>
+3. Choose a name and plan. Then click on select region.<br>
+4. Select the data center that is closest to you and press review.<br>
+5. Then just click on "Create Instance".<br>
+6. Go back to the start page and click on your new database.<br>
+7. Copy the URL for the database.<br>
+8. Back in Heroku click on the settings tab of your application.<br>
+9. Click on "Reveal config vars".<br>
+10. Add a new config var named DATABASE_URL and paste in the URL from ElephantSQL as the value.<br>
+11. Go back to Gitpod and install two more requirements for the database:<br>
+pip3 install dj_databse_url<br>
+pip3 install psycopg2-binary<br>
+Update your requirements.txt file by typing in pip3 freeze --local > requirements.txt<br>
+12. Add the DATABASE_URL to your env.py file.<br>
+13. Go to settings.py and import dj_database_url<br>
+14. Comment out the default DATABASES setting<br>
+Add this under the commented out section:<br>
+DATABASES = {<br>
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))<br>
+}<br>
+15. Run migrations for the new database.<br>
+</details>
+<details>
+<summary>Cloning or forking this repository with GitHub</summary>
+<br>
+- How to fork the project<br>
+Make sure you are logged in on GitHub and then find the repository you want to fork.<br>
+On the top right click the Fork button to make a copy to your account.<br>
+- How to clone the project:<br>
+Click on the "Code" tab under the repository name that you want to clone.<br>
+Then click on "Code" button to the right above the files listed.<br>
+Click on the clipboard icon to copy the URL.<br>
+Open Git Bash in Gitpod or the IDE of your choice.<br>
+Change the working directory to where you want your cloned directory.<br>
+Type git clone and then paste in the URL that you copied, press enter.<br>
+With the repository cloned, run pip3 install -r requirements.txt to download all the dependencies required for deployment.<br>
+Run the command "python manage.py makemigrations", followed by "python manage.py migrate". This will apply all the migrations necessary for the project to work.<br>
+After all the migrations have been successfully made, type the command "python manage.py runserver".<br>
+This will launch the project locally and is ready for development.<br>
+</details>
+<br>
+
 
 ## Credits
 
