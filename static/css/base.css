@@ -337,7 +337,7 @@ a:hover {
 /* ------------------------------- Footer */
 
 footer {
-    height: 4rem;
+    height: fit-content;
     background-color: #192524;
     border-top: 4px solid #dccdc6;
     color: #dccdc6;
@@ -486,5 +486,11 @@ CC 2.0 License Iatek LLC 2018
 
     body {
         height: calc(100vh - 150px);
+    }
+}
+
+@media (max-width: 393px) {
+    .mobile-logo {
+        display: none!important;
     }
 }
