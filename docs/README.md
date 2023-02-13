@@ -4,6 +4,7 @@
 
 ## Contents
 - [About](#about)
+- [Web Marketing](#web-marketing)
 - [User Experience](#user-experience)
     - [Target audiences](#target-audiences)
     - [User Stories](#user-stories)
@@ -37,6 +38,29 @@ Store owners can also use the site to control their product tool, allowing them 
 The Beauty Broker website was made with the Django framework and largely utilises HTML, CSS, Python and components of Javascript/jQuery.
 
 A link to the live site can be found [here](https://beauty-broker.herokuapp.com/).
+
+## Web Marketing and Search Engine Optimisation
+
+Beauty Broker is a 'Business to Customer' site, aimed at selling skincare products to indiviual users. With this in mind, the core business intent of the website is to sell skincare, and to do it in a way that educates shoppers so that they can make informed purchases and buy with confidence. This confidence and positive user experience gained through education will then encourage the user to shop with us again. If a product they have purchased works well for them, they are likely to return repurchase.
+
+Our users are anyone interested in skincare or wanting to see improvements in the health and condition of their skin. A large proportion of our users will be adults and young adults that use Facebook, so this is a great platform for a marketing presence. Other platforms for consideration are Instagram and TikTok - many 'Skinfluencers' have risen to fame through TikTok, so much so it is sometimes referred to as 'SkinTok'!. 
+
+Facebook is a platform that would be great for continuing the education of our users through blog posts, videos and flash sale advertisements. Marketing on Instagram and TikTok would also be great for sale advertising (younger users may be more in need of a sale) along with demonstrating the latest skincare trends.
+
+[Link to Facebook Marketing Page](https://www.facebook.com/people/Beauty-Broker/100090515160784/)
+![Facebook Screenshot whole](images/fb-page-whole.png)
+![Facebook Screenshot 1](images/fb-page1.png)
+![Facebook Screenshot 2](images/fb-page2.png)
+
+Beauty Broker also employs the use of MailChimp to perform email marketing. Users can subscribe the the Beauty Broker emails to receive information about the latest product releases, any sales and to gain access to further skincare advice.
+
+Both social media and email marketing are a great option for Beauty Broker as a smaller online retailer with a small advertisement budget, whilst also providing channels to offer skincare advice and encourage potential buyers to try new products!
+
+I conducted a brainstorm of skincare keywords to help me decide which ones to include in the meta tags and prime real estate (header text, home page).
+
+[SEO Keyword Brainstorm](wireframes/skincare-keywords.pdf)
+
+A further SEO consideration in the Beauty Broker project was the external links listed. These are primarily located in the Skincare Secrets section, and contain links to other high-ranking, high-traffic, reliable websites such as Allure, Cosmopolitan and a dermatology website. Even the Youtube links featured have had thousands of views, with the 'Skinfluencers' having as many as 4.5 million followers.
 
 ## User Experience
 
@@ -534,39 +558,31 @@ To instill user confidence and heighten user experience on the Beauty Broker sit
 - Django is a Python web framework that encourages rapid development. I used the Django framework, in particular the administration site to help manage my models and objects
 - Django allauth is an integrated set of Django applications dealing with account authentication, registration, management that I used for my user accounts
 </details>
-<br>
 <details>
 <summary>Elephant SQL</summary>
 <br>
 - PostgreSQL as a service to host my database
 </details>
-<br>
 <details>
 <summary>Stripe</summary>
 <br>
 - For processing payments and webhooks
 </details>
-<br>
 <details>
 <summary>AWS</summary>
 <br>
 - To store my static files and media
 </details>
-<br>
 <details>
 <summary>MailChimp</summary>
 <br>
 - To create a newsletter signup form
 </details>
-<br>
 <details>
 <summary>LucidChart</summary>
 <br>
-- To create my entity relationship diagram and brainstorm SEO keywords
+- To create my entity relationship diagram and brainstorm SEO keywords, and wireframes
 </details>
-<br>
-
-
 <details>
 <summary>Django</summary>
 <br>
@@ -627,6 +643,7 @@ The Beauty Broker website through following the [Code Institute](https://codeins
 - [The Ordinary's website](https://theordinary.com/en-gb/regimen-builder.html?gclid=CjwKCAiAuaKfBhBtEiwAht6H75qucLChRF1QGVBlfqBo4IXRnCr1_CDIc_01gXVmjgxkJ5egyqieIRoCvdoQAvD_BwE&gclsrc=aw.ds) as a skincare secrets link
 - [Tiny PNG](https://tinypng.com/) to compress images
 - [Convertio](https://convertio.co/) to convert jpeg files to webps
+- [Ad Targeting Website](https://adtargeting.io/industry/skincare-keywords) to help with SEO brainstorming
 
 - [PEAKD](https://beta.peakd.com/hive-163521/@leoumesh/looping-through-carousel-in-django-python) article to help solve bug in carousel in brand product pages
 - [This Stack Overflow Answer](https://stackoverflow.com/questions/34885752/django-template-remove-underscore-and-capitalize-each-word) for helping solve an issue with category header underscores
