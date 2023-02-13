@@ -9,6 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="keywords"
+        content="Skincare, skincare products, beauty products, skincare routine, skin type, beauty, skincare shop, 
+                cleanser, toner, moisturiser, serum, face mask, sunscreen">
+    <meta name="description" content="An online skincare retailer selling high quality skincare and beauty products.">
     {% endblock %}
 
     {% block extra_meta %}
@@ -63,7 +68,8 @@
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search skincare...">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit" id="search-icon">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit"
+                                id="search-icon">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -84,14 +90,14 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Account</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                            {% endif %}
+                            <a href="{% url 'profile' %}" class="dropdown-item">My Account</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -125,11 +131,11 @@
         <div id="delivery-banner" class="row text-center">
             <div class="col text-pink">
                 {% if free_shipping_delta == 45 %}
-                    <h5 class="my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h5>
+                <h5 class="my-1">Free delivery on orders over £{{ free_shipping_threshold }}!</h5>
                 {% elif free_shipping_delta <= 0 %}
-                    <h5>You have qualified for free delivery!</h5>
+                <h5>You have qualified for free delivery!</h5>
                 {% else %}
-                    <h5>Spend <strong>£{{ free_shipping_delta }}</strong> more to get free delivery!</h5>
+                <h5>Spend <strong>£{{ free_shipping_delta }}</strong> more to get free delivery!</h5>
                 {% endif %}
             </div>
         </div>
@@ -137,39 +143,39 @@
     </header>
 
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -184,20 +190,23 @@
     </script>
     {% endblock %}
 
-  </body>
+</body>
 
-  {% block footer%}
-  <footer class="footer mt-auto py-3">
-      <div class="container">
-          <div class="row mx-auto text-center">
-          <div class="col-4">Privacy policy</div>
-          <div class="col-4">
-              <a href="https://www.facebook.com/profile.php?id=100090515160784" target="_blank">Find us on Facebook</a>
-          </div>
-          <div class="col-4">Subscribe to our newsletter</div>
+{% block footer%}
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <div class="row mx-auto text-center">
+            <div class="col-4">Privacy policy</div>
+            <div class="col-4">
+                <a href="https://www.facebook.com/profile.php?id=100090515160784" target="_blank">Find us on
+                    Facebook</a>
+            </div>
+            <div class="col-4">
+                <a href="{% url 'newsletter' %}">Subscribe to our newsletter!</a>
+            </div>
         </div>
-      </div>
-    </footer>
-  {% endblock %}
+    </div>
+</footer>
+{% endblock %}
 
 </html>
