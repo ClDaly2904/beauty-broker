@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator
 
 
 class Product_Category(models.Model):
@@ -44,12 +45,15 @@ class Product(models.Model):
                                   on_delete=models.SET_NULL)
     brand = models.ForeignKey('Brand', null=True, blank=True,
                               on_delete=models.SET_NULL)
-    line_number = models.CharField(max_length=100, primary_key=True)
+    line_number = models.CharField(null=False, blank=False,
+                                   primary_key=True, max_length=20)
     name = models.CharField(max_length=100)
     description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2,
+                                validators=[MinValueValidator(0.1)])
     rating = models.DecimalField(max_digits=6, decimal_places=1,
-                                 null=True, blank=True)
+                                 null=True, blank=True,
+                                 validators=[MinValueValidator(0.1)])
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     size = models.CharField(max_length=100, null=True, blank=True)
