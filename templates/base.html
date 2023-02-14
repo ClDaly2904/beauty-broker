@@ -139,7 +139,6 @@
             </div>
         </div>
     </header>
-    </header>
 
     {% if messages %}
     <div class="message-container">
@@ -189,25 +188,24 @@
     </script>
     {% endblock %}
 
-</body>
-
-{% block footer%}
-<footer class="footer mt-auto py-3">
-    <div class="container">
-        <div class="row mx-auto text-center">
-            <div class="col-4"><a
-                    href="https://www.privacypolicygenerator.info/live.php?token=yYa2TlBM3wz05b26aDqlD1ElOBT1QirX"
-                    rel="external" target="_blank" aria-labelledby="Link to privacy policy">Privacy Policy</a></div>
-            <div class="col-4">
-                <a href="https://www.facebook.com/profile.php?id=100090515160784" target="_blank">Find us on
-                    Facebook</a>
-            </div>
-            <div class="col-4">
-                <a href="{% url 'newsletter' %}">Subscribe to our newsletter!</a>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row mx-auto text-center">
+                <div class="col-4"><a
+                        href="https://www.privacypolicygenerator.info/live.php?token=yYa2TlBM3wz05b26aDqlD1ElOBT1QirX"
+                        rel="external" target="_blank" aria-label="Link to privacy policy">Privacy Policy</a></div>
+                <div class="col-4">
+                    <a href="https://www.facebook.com/profile.php?id=100090515160784" target="_blank"
+                        aria-label="Link to Beauty Broker Facebook Page">Find us on
+                        Facebook</a>
+                </div>
+                <div class="col-4">
+                    <a href="{% url 'newsletter' %}" aria-label="Link to newsletter sign-up">Subscribe to our
+                        newsletter!</a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-{% endblock %}
+    </footer>
+</body>
 
 </html>

@@ -222,6 +222,10 @@ a:hover {
     color: red;
 }
 
+.pd-btn {
+    font-size: 1.25rem;
+}
+
 #mc_embed_signup {
     background: #fff;
     font: 14px;
@@ -256,10 +260,6 @@ a:hover {
 #sort-selector {
     color: #192524;
     border: 2px solid #192524;
-}
-
-#pd-btn {
-    font-size: 1.25rem;
 }
 
 #sc-btn:hover, .atb-btn:hover {
@@ -475,6 +475,10 @@ CC 2.0 License Iatek LLC 2018
     body {
         height: calc(100vh - 116px);
         margin-bottom: 4rem;
+    }
+
+    .mobile-logo {
+        display: display
     }
 }
 
