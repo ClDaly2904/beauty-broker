@@ -430,6 +430,11 @@ In case the browser crashes, webhooks are sent in conjunction with Stripe so tha
 ![Checkout Success](images/features/order-confirmation-page.png)
 
 </details>
+<details><summary>Checkout Success</summary>
+
+![Webhook](images/features/webhooks.png)
+
+</details>
 
 <br>
 

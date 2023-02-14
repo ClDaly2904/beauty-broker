@@ -7,39 +7,26 @@
 
 ## Validators
 #### W3C Html Validator
-I ran all of the html templates used through the W3C html validator.
+I ran all of the html templates used through the W3C html validator. To start with, there were a couple of unenclosed tags, and some aria-labelly attributes with no matching element. My biggest issue was to do with the header, the some of the li elements were the direct child of the nav element which is disallowed. After wrapping this in a ul tag, I then had to customise my css and bootstrap classes to make up for the change in layout.
 
+After this, there were no errors to show, just one warning pertaining to the use of the type tag being unecessary on javascript resources.
 
-<details><summary>Homepage HTML Validation</summary>
+<details><summary>HTML Validation</summary>
 
-![Homepage HTML Validation](images/testing/home-html-val.png)
-
-</details>
-
-<br>
-
-<details><summary>Login HTML Validation</summary>
-
-![Login HTML Validation](images/testing/login-html-val.png)
-
-</details>
-
-<br>
-
-<details><summary>Menu HTML Validation</summary>
-
-![Menu HTML Validation](images/testing/menu-val.png)
+![HTML Validation](images/testing-images/html-validator.png)
 
 </details>
 
 <br>
 
 #### W3C CSS Jigsaw Validator
-After running my style.css file through the CSS validator, there were no errors or warnings to show.
+
 
 <details><summary>CSS Validator</summary>
+All custom css passed with no errors. One warning relating to -webkit-transition being a vendor extension, which came from externally sourced code.
 
-![CSS Validator](images/testing/css-validation.png)
+![CSS Validator](images/testing-images/jigsaw-css-validator.png)
+![CSS Warning](images/testing-images/css-warning.png)
 
 </details>
 
@@ -59,61 +46,22 @@ As Gitpod shows errors in the problems window down by the terminal, I was able t
 <br>
 
 #### Lighthouse SEO
-I ran different pages from Sushi & Sake's website through Chrome Dev Tool's Lighthouse validator, which gave high results in the 90s.
+I tested various pages of my sight in Chrome Dev Tools Lighthouse. Initially, the performance score was low as it took a long time to load the images. I went back to all the images, downloaded the smaller versions, compressed some and converted them into webp format, which greatly improved loading times.
+<details><summary>Lighthouse Validator</summary>
 
-<details><summary>Homepage Lighthouse Validator</summary>
-
-![Homepage Ligthouse](images/testing/home-lighthouse.png)
-
-</details>
-
-<br>
-
-<details><summary>Contact Page Lighthouse Validator</summary>
-
-![Contact Ligthouse](images/testing/contact-lighthouse.png)
+![Index Lighthouse](images/testing-images/index-lighthouse.png)
+![Products Page Lighthouse](images/testing-images/product-lighthouse.png)
+![Checkout Lighthouse](images/testing-images/checkout-lighthouse.png)
 
 </details>
-
-<br>
-
-<details><summary>Menu Lighthouse Validator</summary>
-
-![Menu Ligthouse](images/testing/menu-lighthouse.png)
-
-</details>
-
-<br>
-
-<details><summary>Booking Page Lighthouse Validator</summary>
-
-![Book Ligthouse](images/testing/book-lighthouse.png)
-
-</details>
-
 <br>
 
 ### JSHint Javascript Validator 
-The Sushi & Sake website only uses a small amount of Javascript. The snippet was taken from the Code Institute's CodeStar blog for flash messages. It passed the JS validation with no error other than a couple of undefined variables (set outside the scope of the snippet).
+
 <details><summary>JSHint</summary>
+The bulk of the JS for this product is contained in the stripe_element.js file. The one warning for this was that Stripe was an undefined variable.
 
-![Javascript Validator](images/testing/js-validator.png)
-
-</details>
-
-<br>
-
-### WEBAIM Contrast Checker
-The main Sushi & Sake theme colours include dark grey and black background colours with white, red and yellow accents. I tested the main colours through the WEBAIM Contrast checker to ensure their accessibility.
-<details><summary>Contrast check 1</summary>
-
-![Contrast check 1](images/testing/contrast-checker.png)
-
-</details>
-
-<details><summary>Contrast check 2</summary>
-
-![Contrast check 2](images/testing/contrast-checker2.png)
+![Javascript Validator](images/testing-images/jshint.png)
 
 </details>
 
@@ -141,13 +89,7 @@ I tested Beauty Broker's site on the following browsers with no visible issues f
 Appearance, functionality and responsiveness were consistent for users on various different screen sizes and browsers.
 
 ### Links and Filepaths
-I manually tested all the of the links throughout the website, both those on the navigation bar and those on the pages themselves. All links worked on the deployed site when tested and redirected the user to the requested page. I also checked the same-page links on the admin panel.
-When deployed to the live site, I also checked that there were no broken image links. As all the images were hosted in Cloudinary, this helped eliminated broken links due to incorrect filepaths, and all urls were correct and rendering the right image.
-
-### Form Validation
-During testing it became apparent that both the availability booking and contact forms were lacking in validation. Although the input type in the forms.py file put some input restrictions in place, (for example users are unable to type anything other than numbers into the contact number box for the contact form) some of the fields were allowing invalid inputs such as fields just containing blank spaces.
-A large proportion of iteration 3 was spent considering which forms needed what evaluation and implementing this. Some of the hardest validations to test and implement were for the booking start and booking end times. I implemented validation that meant that users could not enter a date in the past, functions to restrict users to booking slots no more than two hours long. I found working with datetime objects to do this particularly challenging as I had to make sure that I wasn't comparing offset and naive datetime objects.
-If an input does not meet the validation requirements, or a required field is empty, the form will flag this up to the user and explain the 
+I manually tested all the of the links throughout the website, both those on the navigation bar and those on the pages themselves. All links worked on the deployed site when tested and redirected the user to the requested page. Upon original deployment, some of the filepaths for the images were not working. As these were just for decorational purposes, I set these using CSS instead.
 
 <br>
 
@@ -175,49 +117,39 @@ This was my first custom E-commerce project, which came with a steep learning cu
 <details>
 <summary>Heroku deployment- 'zoneports.info' error</summary>
 <br>
-
-
+When deploying project, I came across a 'zoneports.info' error, which kept causing the build to crash in Heroku. After some troubleshooting, I realised that I had started a new Gitpod workspace and that one of the packages I had installed was not the same version as the old workspace. I noticed that zoneports.info had not previously been in my requirements.txt file. I used pip list to check my installed packages and compare them to the packages in the previous workspace. Once all package versions matched I then removed zoneports.info from requirements.txt and Heroku deployed the app successfully.
 </details>
 
 <details>
 <summary>Form Validation</summary>
 <br>
-
-Adding validation to the line number
-
-</details>
-
-<details>
-<summary>Templating bug for id url</summary>
-<br>
+When validating forms, I had a lot of trouble updating the line_number field on the product model. It was first set as a CharField but this left too much room for error, so I wanted to set it as a bigpositiveinteger field. However, as this is the primary key for this model, I was getting errors when trying to change the field type. I eventually got round this using validation in the forms.py file instead. I used a widget to change it to a Number Input, then added a min value validator with a minimum value of 0 to ensure that the number entered would always be positive.
 
 </details>
-
 <details>
 <summary>Caching issue</summary>
 <br>
-
+After deploying my site, I decided to go back in and add some features based on user feedback. This included some new images and css. I ensured that I added the new image files to AWS, but on redeploying, I still couldn't see the new background images that had been set with css. This confused me initially as there were no broken file paths images either. After a bit of stalking through Slack and StackOverflow, I figured out that this was a caching issue. After clearing my browsing data, the images now show up.
 
 </details>
 <details>
 <summary>Street Address</summary>
 <br>
-
+Small bug picked up from a user during user testing. I had accidentally templated the street address 1 to be confirmed back to the user twice, instead of street address 1, then street address 2. This was a quick fix.
 </details>
 
 <details><summary>Category templating</summary>
-
-
+During the searching and sorting epic, I ran into some trouble with templating. When returning categories back through to the template, they were coming through as their name, and I was unable to access their friendly name. They were returning as a list containing their name. This was less of a problem for the product types, which are all one word, but it caused a bad user experience when it came to the skin type categories. For example, instead of 'Oily Skin' being returned to the template, ['oily_skin'] was showing. <br>
+This was easier for product type as I just had to remove the brackets, which could be done via templating ( {{ product_type|join:"[]" }} ).
+For skin type, I had to do this then replace the underscore with a space ( skin_concern_category = sc_word.replace('_', ' ')            sc_word = "".join(skin_type) ) to get the desired outcome.
 </details>
 
 <details><summary>Brand Pages url</summary>
-
+Whilst creating my brand feature pages, I was trying to pass the url parameters in the same way I was using to access product detail pages (using id/pk variable). This was not working in this case, but the pages were displaying fine when the url was being typed in manually. I double checked through the view, the variable that was being returned and the templating syntax. I printed the variables to the terminal to ensure that the correct values were being passed through, but I was still getting the error for 'No Reverse Match'. As there were only two product pages, I just passed the ids in manually ( e.g. brand_page/1/) instead. Tutor support suggested that this might be due to the fact that the way I was trying to do it previously was for large amounts of items rather than just the two brands.
 
 </details>
-
 <details><summary>Accidental commit of database url</summary>
-
-
+One mistake that will definitely cause me to be even more careful in future is the accidental commital of my new Elephant SQL database to my git commit history. Whilst changing over and migrating to the new database, I had commented out the line containing my new database url, causing me to overlook it upon my next commit. Luckily Git Guardian flagged it up and I was able to rectify my mistake (eventually). At first I tried using the gilt filter repo method and BFG cleaner, but could not remove the one line of code containing the database url. Sean from tutor support helped me to undo my last few commits (there was not much code, I was just changing small settings to prepare for deployment) and then commit and push my code back to GitHub, the same as it was but without the database url in the history.
 </details>
 
 <br>
