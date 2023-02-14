@@ -5,22 +5,24 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block inner_content %}
-<h2 class="logo-font my-5 text-center">{% trans "Sign Out" %}</h2>
-<hr>
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
+<div class="flex-wrapper">
+  <h2 class="logo-font my-5 text-center">{% trans "Sign Out" %}</h2>
+  <hr>
+  <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button class="atb-btn" type="submit">{% trans 'Sign Out' %}</button>
-</form>
-<div class="shadow-sm pd-ks-button">
-  <a href="{% url 'home' %}" class="btn d-flex h-100" aria-label="Keep shopping">
+  <form method="post" action="{% url 'account_logout' %}">
+    {% csrf_token %}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <button class="atb-btn" type="submit">{% trans 'Sign Out' %}</button>
+  </form>
+  <div class="shadow-sm pd-ks-button">
+    <a href="{% url 'home' %}" class="btn d-flex h-100" aria-label="Keep shopping">
       <i class="fas fa-chevron-left mx-auto my-auto"></i>
       <small class="mx-auto my-auto">Cancel</small>
-  </a>
+    </a>
+  </div>
 </div>
 
 {% endblock %}

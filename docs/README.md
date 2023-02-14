@@ -259,7 +259,7 @@ I added the wishlist functionality, brand focus and skin secrets pages. The feat
 14. After entering my information correctly, there is a short loading screen then I am met with a page that confirms my order has been successful!
 15. When I go in to my account section, I can see the order I have just created and the delivery information that I asked to save.
 
-Whilst planning the functionality for the Beauty Broker website, I had to consider how I was going to achieve both the aims for the user and the restaurant. This led to the creation of the features found in the Features section.
+Whilst planning the functionality for the Beauty Broker website, I had to consider how I was going to achieve both the aims for the user and the skincare retailer. This led to the creation of the features found in the Features section.
 
 ### Colour Scheme and Fonts
 
@@ -394,7 +394,7 @@ If a user is logged in as a store owner/superuser, they have the ability to add,
 
 <details><summary>Product Management</summary>
 
-![My Bookings](images/features/product-management.png)
+![Product Management](images/features/product-management.png)
 
 </details>
 
@@ -691,7 +691,7 @@ This will launch the project locally and is ready for development.<br>
 
 ### Inspiration
 
-The Beauty Broker website through following the [Code Institute](https://codeinstitute.net/) Boutique Ado Walkthrough. I have customised this to meet the needs of Beauty Broker, but most of the functionality for products, sorting, bag and checkout came from this walkthrough.
+The Beauty Broker website through following the [Code Institute](https://codeinstitute.net/) [Boutique Ado Walkthrough](https://github.com/Code-Institute-Solutions/boutique_ado_v1). I have customised this to meet the needs of Beauty Broker, but most of the functionality for products, sorting, bag and checkout came from this walkthrough. Where whole files (such as quantity-input form) have been utilised and not adjusted, I have marked this in the file.
 
 ### Other
 - [Privacy Policy Generator](https://www.privacypolicygenerator.info/) to generate the privacy policy
@@ -716,16 +716,15 @@ The Beauty Broker website through following the [Code Institute](https://codeins
 - [Tiny PNG](https://tinypng.com/) to compress images
 - [Convertio](https://convertio.co/) to convert jpeg files to webps
 - [Ad Targeting Website](https://adtargeting.io/industry/skincare-keywords) to help with SEO brainstorming
-
-- [PEAKD](https://beta.peakd.com/hive-163521/@leoumesh/looping-through-carousel-in-django-python) article to help solve bug in carousel in brand product pages
-- [This Stack Overflow Answer](https://stackoverflow.com/questions/34885752/django-template-remove-underscore-and-capitalize-each-word) for helping solve an issue with category header underscores
-- [Apps Love World](https://www.appsloveworld.com/django/100/94/django-template-remove-underscore-and-capitalize-each-word) for another part of the category header issue
-
-
 - [Django documentation](https://docs.djangoproject.com/en/4.1/)
 - [Python3 documentation](https://docs.python.org/3/)
 - [W3 Schools](https://www.w3schools.com/python/)
 - As always, [Stack Overflow](https://stackoverflow.com/questions/36432954/ was a great resource for troubleshooting
+
+Resources that helped me solve the bugs in TESTING.md
+- [PEAKD](https://beta.peakd.com/hive-163521/@leoumesh/looping-through-carousel-in-django-python) article to help solve bug in carousel in brand product pages
+- [This Stack Overflow Answer](https://stackoverflow.com/questions/34885752/django-template-remove-underscore-and-capitalize-each-word) for helping solve an issue with category header underscores
+- [Apps Love World](https://www.appsloveworld.com/django/100/94/django-template-remove-underscore-and-capitalize-each-word) for another part of the category header issue
 
 ### Acknowledgements
 - My mentor, Precious Ijege for his constructive feedback
